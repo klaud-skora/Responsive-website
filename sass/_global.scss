@@ -1,0 +1,82 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $background-color;
+  font-family: $brand-font; 
+  font-size: $paragraph-font-size;
+  line-height: 1.7;
+  font-weight: $font-normal;
+  color: $paragraph-color;
+}
+
+.container {
+  background: $color-light;
+  margin: 14px;
+} 
+
+section {
+  opacity: 0;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+}
+
+.container__top {
+  position: relative;
+
+  p {
+    padding: 14px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  &:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    bottom: 0px;
+    background: $color-border;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main_wrapper {
+  height: 100vh;
+  display: flex;
+}
+
+.content {
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.key__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $brand-main-color;
+}
+
+.dot_none {
+  background: $color-dot-none;
+}
+
+.dot_low {
+  background: $color-dot-low;
+}

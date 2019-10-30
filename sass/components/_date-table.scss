@@ -1,0 +1,38 @@
+.time__interval {
+    position: relative;
+    padding: 26px 0;
+  
+    .date__wrapper {
+      display: inline-block;
+      border: 1px solid $color-border;
+      border-radius: 5px;
+      padding: 6px 14px;
+    }
+  
+    input {
+      border: none;
+      position: relative;
+      width: 130px;
+      &:first-of-type::after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 1px;
+        right: 18px;
+        background: $color-border;
+      }
+    }
+  
+    button {
+      display: inline-block;
+    }
+    &:after {
+      position: absolute;
+          content: '';
+          height: 1px;
+          width: 100%;
+          bottom: 0;
+          background: $color-border;
+    }
+  }
+  
