@@ -1,6 +1,8 @@
 .time__interval {
     position: relative;
     padding: 26px 0;
+    display: flex;
+    justify-content: center;
   
     .date__wrapper {
       display: inline-block;
@@ -36,3 +38,10 @@
     }
   }
   
+  @media (max-width: 740px) {
+    .time__interval {
+      width: 100%;
+      display: block;
+      margin: 0 10px;
+    }
+  }

@@ -1,14 +1,35 @@
 //import { settings } from './settings.js';
 import { dataSource } from './data.js';
 import Link from './components/Link.js';
+import Banner from './components/Banner.js';
 
 const app = {
   
+
+  initNavMenu: function() {
+    const thisApp = this;
+
+    const navTrigger = document.querySelector('.menu-trigger');
+    const navMenu = document.querySelector('.horizontal_wrapper');
+
+    navTrigger.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+    });
+  },
+
   initLinks: function() {
     const thisApp = this;
   
     for (let link in thisApp.data.links) {
       new Link(link, thisApp.data.links[link]);
+    } 
+  },
+
+  initBanners: function() {
+    const thisApp = this;
+  
+    for (let banner in thisApp.data.banners) {
+      new Banner(banner, thisApp.data.banners[banner]);
     } 
 
   },
@@ -18,6 +39,7 @@ const app = {
 
     thisApp.data = dataSource;
     thisApp.initLinks();
+    thisApp.initBanners();
   },
 
   initPages: function() {
@@ -69,7 +91,6 @@ const app = {
   activatePage: function(pageId) {
     const thisApp = this;
 
-    console.log('aktywujemy pejdz', pageId);
     /* add class "active" to matching pages, remove from non-matching */
     for (let page of thisApp.pages) {
       page.classList.toggle('active', page.id == pageId);
@@ -77,7 +98,6 @@ const app = {
         page.classList.toggle('active');
       }
     }
-
 
     /* add class "active" to matching links, remove from non-matching */
     for (let link of thisApp.navLinks) {
@@ -91,6 +111,7 @@ const app = {
   init: function() {
     const thisApp = this;
     
+    thisApp.initNavMenu();
     thisApp.initData();
     thisApp.initPages();
   },

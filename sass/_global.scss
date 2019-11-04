@@ -15,6 +15,7 @@ body {
 .container {
   background: $color-light;
   margin: 14px;
+  padding-bottom: 14px;
 } 
 
 .content-pages {
@@ -24,6 +25,8 @@ body {
 
 section {
   display: none;
+  width: 100%;
+  margin: 0 auto;
   &.active {
     display: block;
   }
@@ -62,97 +65,30 @@ section {
 .main_wrapper {
   height: 100vh;
   display: flex;
+  margin: 0 auto;
 }
 
 .content {
   margin: 0 auto;
+  padding: 0;
   width: 100%;
 }
 
 
-.key__dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: $brand-main-color;
-}
-
-.dot_none {
-  background: $color-dot-none;
-}
-
-.dot_low {
-  background: $color-dot-low;
-}
-
-
-.links__container {
-  width: 65%;
-  margin: 0 auto;
-  .btn {
-    margin: 20px auto; 
-   }
-}
-
-.website__link {
-  
-  position: relative;
-  &:before {
-    position: absolute;
-    content: '';
-    height: 1px;
+@media (max-width: 740px) {
+  .main_wrapper {
+    display: block;
+  }
+  .navigation {
     width: 100%;
-    top: 0px;
-    background: $color-border;
+    height: 60px;
+  }
+ 
+  .top_bar {
+    display: none;
   }
 
-  .link__cont {
-    display: inline-block;
-    width: 30%;
-    margin-right: 60px;
-    margin-left: 20px;
-  }
-  .link__icons {
-    margin-right: 20px;
-    width: 50px;
-    margin-left: 30px;
-  }
-
-  a {
-    color: $color-add;
-    cursor: pointer;
-  }
-
-  .link__options {
-    display: flex;
-    justify-content: space-between;
-    visibility: hidden;
-
-    p {
-      display: inline-block;
-      cursor: pointer;
-      &:first-of-type {
-        color: $brand-main-color;
-      }
-    }
-  }
-}
-.website__link:hover {
-  background: $color-link-background;
-  .link__options {
-    visibility: visible;
-  }
-} 
-.website__link:last-of-type {
-  
-  &:after {
-    position: absolute;
-    content: '';
-    height: 1px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background: $color-border;
+  .content-pages {
+    height: 100%;
   }
 }

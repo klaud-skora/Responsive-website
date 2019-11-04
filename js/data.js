@@ -43,3 +43,30 @@ dataSource.links = {
   }
 };
 
+dataSource.banners = {
+  banner_main: {
+    name: 'Banner main',
+    link: 'http://www.website.com/bannermain.gif',
+  },
+  sign_up_banner: {
+    name: 'Sign up banner',
+    link: 'http://www.website.com/signup.gif',
+  },
+  banner_left_side: {
+    name: 'Banner left side',
+    link: 'http://www.website.com/leftside.gif',
+  },
+  vertical_banner: {
+    name: 'Vertical banner',
+    link: 'http://www.website.com/vert.gif',
+  },
+  front_banner: {
+    name: 'Front banner',
+    link: 'http://www.website.com/front.gif',
+  },
+  horizontal_banner: {
+    name: 'Horizontal banner',
+    link: 'http://www.website.com/horizontal.gif',
+  }
+};
+

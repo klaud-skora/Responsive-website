@@ -1,0 +1,15 @@
+.key__dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $brand-main-color;
+  }
+  
+  .dot_none {
+    background: $color-dot-none;
+  }
+  
+  .dot_low {
+    background: $color-dot-low;
+  }
