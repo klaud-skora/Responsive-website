@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Just do it</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Zhi+Mang+Xing&display=swap&subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="vendor/Glyphter.css">
         <link rel="stylesheet" type= "text/css" href="css/style.css">
@@ -15,7 +15,7 @@
             <div class="sidebar">
                 <nav class="navigation vertical_wrapper">
                     <div class="box nav_logo">
-                        <img src="images/logo.png">
+                        <img src="images/logo.png" alt="logo">
                         <i class="fas fa-bars"></i>
                     </div>
                     <div class="box nav_container">
@@ -33,35 +33,35 @@
                                 <p>Details</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="#links">
                             <div class="nav_section">
                                 <div class="marker"></div>
                                 <p class="icon-links"></p>
                                 <p>Links</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="#banners">
                             <div class="nav_section">
                                 <div class="marker"></div>
                                 <p class="icon-banners"></p>
                                 <p>Banners</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="#personal_data">
                             <div class="nav_section">
                                 <div class="marker"></div>
                                 <p class="icon-personal_data"></p>
                                 <p>Personal data</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="#payout">
                             <div class="nav_section">
                                 <div class="marker"></div>
                                 <p class="icon-payout"></p>
                                 <p>Payout</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="#postback">
                             <div class="nav_section">
                                 <div class="marker"></div>
                                 <p class="icon-postback"></p>
@@ -94,7 +94,7 @@
                         </div>
                     </header>
                 </div>
-                <div id="pages">
+                <div class="content-pages" id="pages">
 
                     <section id="general">
                         <div class="container">
@@ -108,7 +108,7 @@
                                         <input id="date__end" type="date" required>
                                         <span class="icon-calendar"></span>
                                     </div>
-                                    <button type="submit" class="btn btn__refresh"><span class="icon-refresh"><span></button>
+                                    <button type="submit" class="btn btn__refresh"><span class="icon-refresh"></span></button>
                                 </form>
                             </div>
                             <div class="chart_container">
@@ -146,26 +146,35 @@
                                     </div>
                                 </div>
                                 <div class="chart__image cont">
-                                    <img src="images/chart01.png">
+                                    <img src="images/chart01.png" alt="chart">
                                 </div>
                             </div>
                         </div>  
-                        <div class="container">
-                            <div class="container__top">
-                                <p>Links</p>
-                            </div>
-                            <div class="chart_container cont">
-                                <div class="btn">+ add</div>
-                                <div>
-
-                                </div>
-                                <div class="btn">+ add</div>
-                            </div>
-                        </div>
+                        
                     </section>
 
-                    <section id="datails"></section>
-                    <section id="links"></section>
+                    <section id="details">
+                        <div class="container">
+                            <div class="container__top">
+                                <p>Details</p>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <section id="links">
+
+                            <div class="container">
+                                    <div class="container__top">
+                                        <p>Links</p>
+                                    </div>
+                                    <div class="links__container">
+                                        <div class="btn">+ add</div>
+                                        <div id="linksList" class="listOfLinks__container"></div>
+                                        <div class="btn">+ add</div>
+                                    </div>
+                                </div>
+
+                    </section>
                     <section id="banners"></section>
                     <section id="personal_data"></section>
                     <section id="payout"></section>
@@ -174,6 +183,25 @@
             </div>
         </div>
 
+        <script id="template-links" type="text/x-handlebars-template">
+            <article class="website__link"> <!-- link -->
+                <div class="link__name link__cont"> <!-- description -->
+                    <h3>{{{ name }}}</h3>
+                </div> <!-- .description -->
+                <div class="link__wrapper link__cont"> <!-- link to website -->
+                    <a>{{{ link }}}</a>
+                </div>
+                <div class="link__icons link__cont">
+                    <div class="link__options">
+                        <p class="icon-links"></p>
+                        <p class="icon-trash"></p>
+                    </div>
+                </div>
+      
+            </article> <!-- .link -->
+          </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
         <script src="js/app.js" type="module"></script>
     </body>
 </html>

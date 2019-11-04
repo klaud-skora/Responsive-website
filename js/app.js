@@ -1,10 +1,30 @@
+//import { settings } from './settings.js';
+import { dataSource } from './data.js';
+import Link from './components/Link.js';
+
 const app = {
+  
+  initLinks: function() {
+    const thisApp = this;
+  
+    for (let link in thisApp.data.links) {
+      new Link(link, thisApp.data.links[link]);
+    } 
+
+  },
+  
+  initData: function() {
+    const thisApp = this;
+
+    thisApp.data = dataSource;
+    thisApp.initLinks();
+  },
 
   initPages: function() {
     const thisApp = this;
     
     thisApp.pages = document.querySelector('#pages').children;
-    console.log('thisApp.pages', thisApp.pages);
+    //console.log('thisApp.pages', thisApp.pages);
     thisApp.navLinks = document.querySelectorAll('.nav_container a');
     
     const idFromHash = window.location.hash.replace('#/', '');
@@ -49,10 +69,15 @@ const app = {
   activatePage: function(pageId) {
     const thisApp = this;
 
+    console.log('aktywujemy pejdz', pageId);
     /* add class "active" to matching pages, remove from non-matching */
     for (let page of thisApp.pages) {
       page.classList.toggle('active', page.id == pageId);
+      if (pageId == 'general' && page.id == 'links') {
+        page.classList.toggle('active');
+      }
     }
+
 
     /* add class "active" to matching links, remove from non-matching */
     for (let link of thisApp.navLinks) {
@@ -65,7 +90,8 @@ const app = {
 
   init: function() {
     const thisApp = this;
-    console.log('initing');
+    
+    thisApp.initData();
     thisApp.initPages();
   },
 };
