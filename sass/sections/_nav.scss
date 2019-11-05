@@ -137,7 +137,7 @@
     }
     .horizontal_wrapper {
         display: none;
-        &.active {
+        &.show {
             display: block;
             padding-bottom: 25px;
             .nav_infoNavi {

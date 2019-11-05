@@ -9,11 +9,16 @@ const app = {
   initNavMenu: function() {
     const thisApp = this;
 
-    const navTrigger = document.querySelector('.menu-trigger');
+    const hamburger = document.querySelector('.menu-trigger');
     const navMenu = document.querySelector('.horizontal_wrapper');
 
-    navTrigger.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
+    function toggleMenu(visible) {
+      navMenu.classList.toggle('show', visible);
+    }
+
+    hamburger.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleMenu();
     });
   },
 
