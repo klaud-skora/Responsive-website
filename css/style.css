@@ -583,9 +583,25 @@ template {
   color: #a6a6a6;
 }
 
+.navigation .nav_logo .logo_image {
+  cursor: pointer;
+}
+
 .navigation .nav_container {
   margin-bottom: 60px;
   position: relative;
+}
+
+.navigation .nav_container a.active .nav_section {
+  background: #333333;
+}
+
+.navigation .nav_container a.active .marker {
+  visibility: visible;
+}
+
+.navigation .nav_container a.active p, .navigation .nav_container a.active i {
+  color: #fff;
 }
 
 .navigation .nav_container::after {
@@ -999,7 +1015,7 @@ template {
 
 .container__content .container__section {
   position: relative;
-  margin: 50px auto 100px;
+  margin: 30px auto 100px;
 }
 
 .container__content .container__section::after {
@@ -1007,7 +1023,7 @@ template {
   content: '';
   height: 1px;
   width: 100%;
-  bottom: -50px;
+  bottom: -60px;
   background: #e3e3e3;
 }
 

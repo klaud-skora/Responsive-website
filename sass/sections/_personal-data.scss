@@ -3,14 +3,14 @@
 
     .container__section {
         position: relative;
-        margin: 50px auto 100px;
+        margin: 30px auto 100px;
 
         &::after {
             position: absolute;
             content: '';
             height: 1px;
             width: 100%;
-            bottom: -50px;
+            bottom: -60px;
             background: $color-border;
         }
     }

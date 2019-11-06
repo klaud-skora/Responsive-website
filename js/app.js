@@ -8,7 +8,7 @@ const app = {
 
   initNavMenu: function() {
     const thisApp = this;
-
+    console.log(thisApp);
     const hamburger = document.querySelector('.menu-trigger');
     const navMenu = document.querySelector('.horizontal_wrapper');
 

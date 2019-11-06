@@ -15,11 +15,27 @@
         a {
             color: $paragraph-color;
         }
+
+        .logo_image {
+            cursor: pointer;
+        }
     }
 
     .nav_container {
         margin-bottom: 60px;
         position: relative;
+    }
+    .nav_container a.active {
+        .nav_section {
+            background: lighten($navback-color, 10%);
+        }
+        .marker {
+            visibility: visible;
+        }
+        
+        p, i {
+            color: $color-light;
+        }
     }
     
     .nav_container::after {
@@ -68,6 +84,7 @@
                 color: $color-light;
             }
         }
+        
     }
     .nav_user {
         padding-left: 18px;
