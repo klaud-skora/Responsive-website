@@ -218,9 +218,9 @@
                                 <p>Banners</p>
                             </div>
                             <div class="container__links">
-                                <div class="btn">+ add</div>
+                                <div class="btn btn-add-banner">+ add</div>
                                 <div id="bannersList" class="listOfLinks__container"></div>
-                                <div class="btn">+ add</div>
+                                <div class="btn btn-add-banner">+ add</div>
                             </div>
                         </div>
                     </section>
@@ -300,7 +300,7 @@
         <div class="overlay" id="overlay">
             <div class="pop-up__links advert_pop modal" id="links-modal">
             <div class="container__top">
-                <p>ADD URL</p>
+                <p>Add url</p>
                 <div class="icon-close btn-close js--close-modal"></div>
             </div>
             <div class="pop-up__header">
@@ -630,19 +630,249 @@
                         </div> 
                     </div>
                 </div>
-                <div class="checkboxes-container__submit">
-                    <input name="generated_link" required placeholder="Generated link">
-                    <button type="submit" class="btn btn__link">
-                        <div class="icon-links"></div>
-                        <span>Copy link</span>
-                    </button> 
-                    <button type="submit" class="btn btn__save js--close-modal">Save</button>
+            </div>
+            <div class="checkboxes__submit">
+                <input name="generated_link" required placeholder="Generated link">
+                <button type="submit" class="btn btn__link">
+                    <div class="icon-links"></div>
+                    <span>Copy link</span>
+                </button> 
+                <button type="submit" class="btn btn__save js--close-modal">Save</button>
+            </div>
+        </div>
+        
+        
+        <div class="pop-up__banners advert_pop modal" id="banners-modal">
+            <div class="container__top">
+                    <p>Add banners</p>
+                    <div class="icon-close btn-close js--close-modal"></div>
+            </div>
+            <div class="pop-up__header">
+                <div class="box">
+                    <h3>Scheme name</h3>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="box">
+                    <h3>Compain</h3>
+                    <input type="select" placeholder="Select compain">
+                </div>
+                <div class="box_lang">
+                    <h3>Language</h3>
+                    <select name="language">
+                        <option name="english" value="EN">🇬🇧&emsp;EN</option> 
+                    </select>
+                </div>
+                <div class="box">
+                    <h3>Weight-Height</h3>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="box">
+                    <h3>Design</h3>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="box">
+                    <h3>File type</h3>
+                    <input type="text" placeholder="All">
                 </div>
             </div>
+             
+            <div class="banners-checkboxes-container">
+
+
+                <div class="banners-column">
+                    <div class="checkboxes-container__title">
+                        <h3>Select banners</h3>
+                    </div>
+                    <div class="checkboxes_column">
+                        <div class="checkboxes-container__content">
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="banner_main"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Banner main
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="sign_up"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Sign up banner
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="left_banner"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Left banner
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="right_banner"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Right banner
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="bottom_banner"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Bottom banner
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="long_banner"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Long banner
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="personal_banner"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Personal cabinet banner
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="popup_banner"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Popup banner
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="banners-column">
+                    <div class="checkboxes-container__title">
+                        <h3>Select websites</h3>
+                    </div>
+                    <div class="checkboxes_column">
+                       <div class="checkboxes-container__content">
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="page_money"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Landing page Money
+                                </label>
+                            <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="your_choice"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    LP Your choise
+                                </label>
+                            <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="wallet"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    LP Wallet
+                                </label>
+                            <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="e-shop"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    E-Shop 01
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="toy_store"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Toy Store
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="book_store"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Book Store
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="charity"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    Charity
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                            <div class="box_option">
+                                <label>
+                                    <input type="checkbox" name="icons"/>
+                                    <div class="checkbox_background">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    LP Icons Store
+                                </label>
+                                <div class="icon-show"></div>
+                            </div> 
+                       </div>
+                    </div>
+                </div>  
+            
             </div>
-            <div class="pop-up__banners advert_pop modal"></div>
+
+
+            <div class="checkboxes__submit">
+                <input name="generated_link" required placeholder="Generated link">
+                <button type="submit" class="btn btn__link">
+                    <div class="icon-links"></div>
+                    <span>Copy link</span>
+                </button> 
+                <button type="submit" class="btn btn__save js--close-modal">Save</button>
+            </div> 
         </div>
-       
+
+
         <script id="template-links" type="text/x-handlebars-template">
             <article class="website__link"> <!-- link -->
                 <div class="link__name link__cont"> <!-- description -->

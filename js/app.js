@@ -101,10 +101,10 @@ const app = {
     }
   },
 
-  activateModals: function() {
+  activateModal: function() {
 
     function closeModal() {
-      document.getElementById('overlay').classList.remove('show')
+      document.getElementById('overlay').classList.remove('show');
     }
     document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
@@ -125,23 +125,29 @@ const app = {
     });
     
     function openModal(modal) {
-      console.log('modal', modal);
-      document.querySelectorAll('#overlay > modal').forEach(function(modal) {
+      document.querySelectorAll('#overlay > *').forEach(function(modal) {
         modal.classList.remove('show');
       });
     
       document.querySelector('#overlay').classList.add('show');
-      console.log('modal', modal);
       modal.classList.add('show');
     }
+
     document.querySelectorAll('.btn-add-link').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
         const linksModal = document.querySelector('#links-modal');
-        console.log(linksModal);
         openModal(linksModal);
       });
-    });    
+    }); 
+    
+    document.querySelectorAll('.btn-add-banner').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const bannersModal = document.querySelector('#banners-modal');
+        openModal(bannersModal);
+      });
+    }); 
   },
 
   init: function() {
@@ -150,7 +156,7 @@ const app = {
     thisApp.initNavMenu();
     thisApp.initData();
     thisApp.initPages();
-    thisApp.activateModals();
+    thisApp.activateModal();
   },
 };
 

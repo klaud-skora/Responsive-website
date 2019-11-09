@@ -1,5 +1,3 @@
-
-
 .advert_pop {
     h3 {
         margin-top: 0;
@@ -19,13 +17,15 @@
 .pop-up__header {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     padding: 15px 15px 0;
 
     .box {
-        flex: 40%;
+        flex: 33.33%;
         max-width: 40%;
+        margin-bottom: 20px;
     }
     &::after {
         position: absolute;
@@ -40,6 +40,8 @@
     .box_lang {
         flex: 10%;
         max-width: 10%;
+        margin-bottom: 20px;
+        margin-right: 15px;
     }
 
     select {
@@ -63,6 +65,7 @@
             font-size: 12px;
         }
     }
+
     input[type="select"] {
         background-image: url('../../images/icons/arrow-down-small.svg');
         padding: 5px 30px 5px 10px;
@@ -74,31 +77,23 @@
 }
 
 .checkboxes-container {
-    padding: 30px 0 20px;
+    padding: 30px 15px 20px;
      /* scrollbar */
-        /* width */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: #e3e3e3; 
-        }
-        
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #9c9c9c; 
-        }
-        
-        /* Handle on hover */
-        /*::-webkit-scrollbar-thumb:hover {
-            background: #9c9c9c; 
-        } */
-
-    .checkboxes-container__title {
-        padding: 0 15px;
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
     }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #e3e3e3; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #9c9c9c; 
+    }
+
 
     .checkboxes-container__content {
         width: 100%;
@@ -115,65 +110,100 @@
         flex: 32%;
         max-width: 32%;
     }
+}
+.box_option {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
 
-    .box_option {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 15px;
-
-        .icon-show {
-            color: $color-add;
-            visibility: hidden;
-        }
-
-        &:hover {
-            background-color: $checkbox-shade;
-            .icon-show {
-                visibility: visible;
-                cursor: pointer;
-            }
-        } 
+    .icon-show {
+        color: $color-add;
+        visibility: hidden;
     }
 
-    .checkboxes-container__submit {
-        width: 100%;
-        padding: 0 15px;
-        display: flex;
-        position: relative;
+    &:hover {
+        background-color: $checkbox-shade;
+        .icon-show {
+            visibility: visible;
+            cursor: pointer;
+        }
+    } 
+}
+.checkboxes__submit {
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    
+    input {
+        flex: 82%;
+        max-width: 82%;
+        height: 30px;
         
-        input {
-            flex: 82%;
-            max-width: 82%;
-            height: 30px;
-            
-            &::placeholder {
-                color: $paragraph-color;
-                font-size: 12px;
-            }
+        &::placeholder {
+            color: $paragraph-color;
+            font-size: 12px;
         }
+    }
 
-        .btn {
-            min-height: 30px;
-        }
+    .btn {
+        min-height: 30px;
+    }
 
-        .btn__link {
-            flex: 11%;
-            max-width: 11%;
-        }
+    .btn__link {
+        flex: 11%;
+        max-width: 11%;
+    }
 
-        .btn__save {
-            flex: 6%;
-            max-width: 6%;
-        }
+    .btn__save {
+        flex: 6%;
+        max-width: 6%;
+    }
 
-        &::before {
-            position: absolute;
-            content: '';
-            height: 1px;
-            width: 100%;
-            left: 0;
-            top: -20px;
-            background: $color-border;
-        }
+    &::before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100%;
+        left: 0;
+        top: -20px;
+        background: $color-border;
+    }
+}
+
+.banners-checkboxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 15px;
+    height: 300px;
+    width: 100%;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #e3e3e3; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #9c9c9c; 
+    }
+
+    .banners-column {
+        flex: 50%;
+        max-width: 50%;   
+        padding-bottom: 20px;
+    }
+
+    .checkboxes-container__content {
+        padding: 15px 0;
+    }
+
+    .checkboxes_column {
+        max-width: 100%;
+        height: 200px;
+        overflow-y: scroll;
     }
 }

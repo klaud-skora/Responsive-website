@@ -17,21 +17,24 @@
   padding: 30px;
   display: none;
 }
+
 .overlay.show {
   display: flex;
 }
+
 .overlay::webkit-scrollbar {
   display: none;
 }
 
 .modal {
-  width: 1000px;
+  width: 1100px;
   margin: auto;
   background-color: $color-light;
   position: relative;
-  padding: 20px;
+  padding: 20px 0;
   display: none;
 }
+
 .modal.show {
   display: block;
 }
@@ -153,8 +156,8 @@ label {
         z-index: 100;
         color: transparent;
       }
-
     }
+
     &:checked +.checkbox_background {
       background-color: $color-checked;
       border: 1px solid $color-checked;
@@ -165,22 +168,6 @@ label {
     }
   }
 }
-
-/* pop-ups */
-/*.pop-up_links {
-  visibility: hidden;
-
-  &.active {
-    visibility: visible;
-    position: absolute;
-    top: 25%;
-    left: 0;
-    //transition: translate(-50%, -50%);
-    z-index: 99;
-    vertical-align: middle;
-  }
-}
-*/
 
 /* media queires */
 @media (max-width: 740px) {

@@ -55,11 +55,11 @@ h5 {
 }
 
 .modal {
-  width: 1000px;
+  width: 1100px;
   margin: auto;
   background-color: #fff;
   position: relative;
-  padding: 20px;
+  padding: 20px 0;
   display: none;
 }
 
@@ -202,21 +202,6 @@ label input[type="checkbox"]:checked + .checkbox_background i {
   color: #fff;
 }
 
-/* pop-ups */
-/*.pop-up_links {
-  visibility: hidden;
-
-  &.active {
-    visibility: visible;
-    position: absolute;
-    top: 25%;
-    left: 0;
-    //transition: translate(-50%, -50%);
-    z-index: 99;
-    vertical-align: middle;
-  }
-}
-*/
 /* media queires */
 @media (max-width: 740px) {
   body {
@@ -1272,6 +1257,8 @@ template {
   display: flex;
   -ms-flex-align: end;
       align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
   position: relative;
@@ -1279,9 +1266,10 @@ template {
 }
 
 .pop-up__header .box {
-  -ms-flex: 40%;
-      flex: 40%;
+  -ms-flex: 33.33%;
+      flex: 33.33%;
   max-width: 40%;
+  margin-bottom: 20px;
 }
 
 .pop-up__header::after {
@@ -1298,6 +1286,8 @@ template {
   -ms-flex: 10%;
       flex: 10%;
   max-width: 10%;
+  margin-bottom: 20px;
+  margin-right: 15px;
 }
 
 .pop-up__header select {
@@ -1339,15 +1329,11 @@ template {
 }
 
 .checkboxes-container {
-  padding: 30px 0 20px;
+  padding: 30px 15px 20px;
   /* scrollbar */
   /* width */
   /* Track */
   /* Handle */
-  /* Handle on hover */
-  /*::-webkit-scrollbar-thumb:hover {
-            background: #9c9c9c; 
-        } */
 }
 
 .checkboxes-container ::-webkit-scrollbar {
@@ -1360,10 +1346,6 @@ template {
 
 .checkboxes-container ::-webkit-scrollbar-thumb {
   background: #9c9c9c;
-}
-
-.checkboxes-container .checkboxes-container__title {
-  padding: 0 15px;
 }
 
 .checkboxes-container .checkboxes-container__content {
@@ -1386,7 +1368,7 @@ template {
   max-width: 32%;
 }
 
-.checkboxes-container .box_option {
+.box_option {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -1394,62 +1376,63 @@ template {
   padding: 10px 15px;
 }
 
-.checkboxes-container .box_option .icon-show {
+.box_option .icon-show {
   color: #56819f;
   visibility: hidden;
 }
 
-.checkboxes-container .box_option:hover {
+.box_option:hover {
   background-color: #f2f2f2;
 }
 
-.checkboxes-container .box_option:hover .icon-show {
+.box_option:hover .icon-show {
   visibility: visible;
   cursor: pointer;
 }
 
-.checkboxes-container .checkboxes-container__submit {
-  width: 100%;
+.checkboxes__submit {
   padding: 0 15px;
+  width: 100%;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-top: 20px;
 }
 
-.checkboxes-container .checkboxes-container__submit input {
+.checkboxes__submit input {
   -ms-flex: 82%;
       flex: 82%;
   max-width: 82%;
   height: 30px;
 }
 
-.checkboxes-container .checkboxes-container__submit input:-ms-input-placeholder {
+.checkboxes__submit input:-ms-input-placeholder {
   color: #a6a6a6;
   font-size: 12px;
 }
 
-.checkboxes-container .checkboxes-container__submit input::placeholder {
+.checkboxes__submit input::placeholder {
   color: #a6a6a6;
   font-size: 12px;
 }
 
-.checkboxes-container .checkboxes-container__submit .btn {
+.checkboxes__submit .btn {
   min-height: 30px;
 }
 
-.checkboxes-container .checkboxes-container__submit .btn__link {
+.checkboxes__submit .btn__link {
   -ms-flex: 11%;
       flex: 11%;
   max-width: 11%;
 }
 
-.checkboxes-container .checkboxes-container__submit .btn__save {
+.checkboxes__submit .btn__save {
   -ms-flex: 6%;
       flex: 6%;
   max-width: 6%;
 }
 
-.checkboxes-container .checkboxes-container__submit::before {
+.checkboxes__submit::before {
   position: absolute;
   content: '';
   height: 1px;
@@ -1457,6 +1440,45 @@ template {
   left: 0;
   top: -20px;
   background: #e3e3e3;
+}
+
+.banners-checkboxes-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 40px 15px;
+  height: 300px;
+  width: 100%;
+}
+
+.banners-checkboxes-container ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.banners-checkboxes-container ::-webkit-scrollbar-track {
+  background: #e3e3e3;
+}
+
+.banners-checkboxes-container ::-webkit-scrollbar-thumb {
+  background: #9c9c9c;
+}
+
+.banners-checkboxes-container .banners-column {
+  -ms-flex: 50%;
+      flex: 50%;
+  max-width: 50%;
+  padding-bottom: 20px;
+}
+
+.banners-checkboxes-container .checkboxes-container__content {
+  padding: 15px 0;
+}
+
+.banners-checkboxes-container .checkboxes_column {
+  max-width: 100%;
+  height: 200px;
+  overflow-y: scroll;
 }
 
 /* Pages / Views */
