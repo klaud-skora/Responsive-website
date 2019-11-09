@@ -1,16 +1,15 @@
-//import { settings } from './settings.js';
 import { dataSource } from './data.js';
 import Link from './components/Link.js';
 import Banner from './components/Banner.js';
 
 const app = {
   
-
   initNavMenu: function() {
     const thisApp = this;
     console.log(thisApp);
     const hamburger = document.querySelector('.menu-trigger');
     const navMenu = document.querySelector('.horizontal_wrapper');
+    const navMenuWrapper = document.querySelector('.sidebar');
 
     function toggleMenu(visible) {
       navMenu.classList.toggle('show', visible);
@@ -19,6 +18,7 @@ const app = {
     hamburger.addEventListener('click', function(e) {
       e.preventDefault();
       toggleMenu();
+      navMenuWrapper.classList.toggle('active');
     });
   },
 
@@ -36,7 +36,6 @@ const app = {
     for (let banner in thisApp.data.banners) {
       new Banner(banner, thisApp.data.banners[banner]);
     } 
-
   },
   
   initData: function() {
@@ -82,16 +81,6 @@ const app = {
         window.location.hash = '#/' + id;
       });
     }
-    /*
-    thisApp.homePage.addEventListener('click', function(event) {
-      const clickedElement = this;
-      event.preventDefault();
-    
-      const id = clickedElement.getAttribute('href').replace('#',  '');
-      thisApp.activatePage(id);
-      window.location.hash = '#/' + id;
-    });
-    */
   },
   activatePage: function(pageId) {
     const thisApp = this;
@@ -112,6 +101,48 @@ const app = {
     }
   },
 
+  activateModals: function() {
+
+    function closeModal() {
+      document.getElementById('overlay').classList.remove('show')
+    }
+    document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeModal();
+      });
+    });
+    document.querySelector('#overlay').addEventListener('click', function(e) {
+      if(e.target === this) {
+        closeModal();
+      }
+    });
+    
+    document.addEventListener('keyup', function(e) {
+      if(e.keyCode === 27) {
+        closeModal();
+      }
+    });
+    
+    function openModal(modal) {
+      console.log('modal', modal);
+      document.querySelectorAll('#overlay > modal').forEach(function(modal) {
+        modal.classList.remove('show');
+      });
+    
+      document.querySelector('#overlay').classList.add('show');
+      console.log('modal', modal);
+      modal.classList.add('show');
+    }
+    document.querySelectorAll('.btn-add-link').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const linksModal = document.querySelector('#links-modal');
+        console.log(linksModal);
+        openModal(linksModal);
+      });
+    });    
+  },
 
   init: function() {
     const thisApp = this;
@@ -119,6 +150,7 @@ const app = {
     thisApp.initNavMenu();
     thisApp.initData();
     thisApp.initPages();
+    thisApp.activateModals();
   },
 };
 

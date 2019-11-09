@@ -18,3 +18,26 @@
     height: 40px;
     padding-top: 2px;
 }
+
+.btn__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background-color: $color-border;
+    text-shadow: none;
+    margin: 0;
+    margin-left: 6px;
+    font-size: 13px;
+    border: none;
+    border-radius: 2px;
+    color: #fdfdfd;
+}
+
+.btn__save {
+    margin: 0;
+    margin-left: 6px;
+    font-size: 13px;
+    border-radius: 2px;
+    border-color: $brand-main-color;
+}

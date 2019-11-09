@@ -29,17 +29,12 @@
         input {
             flex: 66%;
             max-width: 66%;
-            padding: 5px;
             height: 38px;
-            border-radius: $radius;
-            outline: none;
-            border: 1px solid #dddddd;
         }
     }
 }
+
 @media (max-width: 740px) {
-   
-    
     .container__content {
         .container__form__row {
             height: 50px;
@@ -50,6 +45,7 @@
                 max-width: 100%;
             }
         }
+        
         .container__section {
             position: relative;
             margin: 20px auto 70px;

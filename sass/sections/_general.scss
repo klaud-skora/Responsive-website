@@ -1,30 +1,30 @@
 .chart_container {
     width: 700px;
     margin: 40px auto 20px;
+
+    .row {
+        margin: 16px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex: 50%;
     
-}
-
-.row {
-    margin: 16px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex: 50%;
-    .chart_box {
-        position: relative;
-        width: 300px;
-    }
-    .chart_box:after {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100%;
-        bottom: 0px;
-        background: $color-border;
-    }
-
-    h3 {
-        margin: 0;
+        .chart_box {
+            position: relative;
+            width: 300px;
+        }
+        .chart_box:after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 100%;
+            bottom: 0px;
+            background: $color-border;
+        }
+    
+        h3 {
+            margin: 0;
+        }
     }
 }
 
@@ -35,29 +35,35 @@
         display: flex;
         justify-content: center;
     }
+
     .chart__key {
         border-radius: $radius;
         padding: 8px 12px;
         margin-right: 25px;
         display: inline-block;
     }
+
     .shaded {
         background: $color-shade;
     }
+
     p {
         display: inline-block;
         margin: 0 5px 0 10px;
     }
+
     .earned {
         color: $color-add;
     }
 }
+
 .chart__image {
     height: 300px;
     max-width: 600px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+
     img {
         width: 100%;
         height: 100%;
@@ -68,17 +74,27 @@
 
     .chart_container {
         padding: 20px;
+        width: 100%;
     
         .chart__keys {
+            width: 30%;
             .keys {
-                display: inline-block;
-                margin: 10px 0 ;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 10px 0;
+            }
+            .chart__key {
+                flex: 100%;
+                margin: 4px 5px;;
             }
         }
         .chart__image {
-            width: 400px;
-            height: 180px;
+            width: 100%;
             margin: 0;
+            overflow-x: scroll;
+            img {
+                width: 600px; 
+            }
         }
 
         .row {

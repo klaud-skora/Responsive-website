@@ -42,6 +42,12 @@
     .time__interval {
       width: 100%;
       display: block;
-      margin: 0 10px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+    .date__form {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 100%;
     }
   }
