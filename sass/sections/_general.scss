@@ -12,6 +12,16 @@
         .chart_box {
             position: relative;
             width: 300px;
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                display: inline-block;
+                margin: 0;
+            }
+            span {
+                color: $color-label;
+            }
         }
         .chart_box:after {
             position: absolute;

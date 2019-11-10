@@ -977,6 +977,19 @@ template {
 .chart_container .row .chart_box {
   position: relative;
   width: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.chart_container .row .chart_box h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+.chart_container .row .chart_box span {
+  color: #333333;
 }
 
 .chart_container .row .chart_box:after {
@@ -1511,7 +1524,7 @@ template {
 
 .pop-up_quit .quit__buttons {
   width: 100%;
-  padding-top: 30px;
+  padding: 30px 10px 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
