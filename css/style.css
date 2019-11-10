@@ -1328,6 +1328,7 @@ template {
   cursor: pointer;
 }
 
+/* links */
 .checkboxes-container {
   padding: 30px 15px 20px;
   /* scrollbar */
@@ -1442,6 +1443,7 @@ template {
   background: #e3e3e3;
 }
 
+/* banners */
 .banners-checkboxes-container {
   display: -ms-flexbox;
   display: flex;
@@ -1479,6 +1481,58 @@ template {
   max-width: 100%;
   height: 200px;
   overflow-y: scroll;
+}
+
+/* quit */
+.pop-up_quit {
+  max-width: 300px;
+  max-height: 200px;
+  padding: 15px 0;
+}
+
+.pop-up_quit .quit__title {
+  padding: 0 15px;
+  position: relative;
+}
+
+.pop-up_quit .quit__title h3 {
+  margin: 0;
+}
+
+.pop-up_quit .quit__title::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -15px;
+  background: #e3e3e3;
+}
+
+.pop-up_quit .quit__buttons {
+  width: 100%;
+  padding-top: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.pop-up_quit .quit__buttons .btn {
+  -ms-flex: 50%;
+      flex: 50%;
+  max-width: 30%;
+  margin-right: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.pop-up_quit .quit__buttons .btn__link {
+  background: #979797;
 }
 
 /* Pages / Views */

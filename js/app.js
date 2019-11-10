@@ -133,6 +133,7 @@ const app = {
       modal.classList.add('show');
     }
 
+    /* listener for links */
     document.querySelectorAll('.btn-add-link').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -140,7 +141,8 @@ const app = {
         openModal(linksModal);
       });
     }); 
-    
+
+    /* listener for banners */
     document.querySelectorAll('.btn-add-banner').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -148,6 +150,15 @@ const app = {
         openModal(bannersModal);
       });
     }); 
+
+    /* listener for quit */
+    document.querySelectorAll('.icon-quit').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const quitModal = document.querySelector('#quit-modal');
+        openModal(quitModal);
+      });
+    });
   },
 
   init: function() {
