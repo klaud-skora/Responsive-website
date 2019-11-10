@@ -75,7 +75,7 @@ const app = {
               start = (i - 1) * payoutAmount + 1;
             }
           }
-          end =  start + payoutAmount;      
+          end =  start + payoutAmount - 1;      
         } 
 
         payoutContainer.innerHTML = '';
