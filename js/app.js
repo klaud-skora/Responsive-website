@@ -1,6 +1,7 @@
 import { dataSource } from './data.js';
 import Link from './components/Link.js';
 import Banner from './components/Banner.js';
+import Payout from './components/Payout.js';
 
 const app = {
   
@@ -37,13 +38,64 @@ const app = {
       new Banner(banner, thisApp.data.banners[banner]);
     } 
   },
+
+  initPayout: function() {
+    const thisApp = this;
+
+    const payoutAmount = thisApp.data.payout.length / 9;
+    let start = 1;
+    let end = start + payoutAmount;
+
+    for (let pay in thisApp.data.payout.slice(start, end)) {
+      new Payout(pay, thisApp.data.payout[pay]);
+    } 
+    thisApp.updatePayout();
+  },
+
+  updatePayout: function() {
+    const thisApp = this;
+
+    const payoutAmount = thisApp.data.payout.length / 9;
+    const navNumbs = document.querySelectorAll('.navNumber');
+    const payoutContainer = document.querySelector('#payout-content');
+
+    let start; 
+    let end;
+
+    for (let navNumb of navNumbs) {
+      navNumb.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        if (navNumb.id == 1) {
+          start = 1;
+          end = payoutAmount + 1;
+        } else {
+          for ( let i = 2; i < 10; i++) {
+            if (navNumb.id == i ) {
+              start = (i - 1) * payoutAmount + 1;
+            }
+          }
+          end =  start + payoutAmount;      
+        } 
+
+        payoutContainer.innerHTML = '';
+        console.log('start', start);
+        console.log('end', end);
+        for (let pay in thisApp.data.payout.slice(start, end)) {
+          new Payout(pay, thisApp.data.payout.slice(start, end)[pay]);
+        } 
+      });
+    }
+  },
   
   initData: function() {
     const thisApp = this;
 
     thisApp.data = dataSource;
+  
     thisApp.initLinks();
     thisApp.initBanners();
+    thisApp.initPayout();
   },
 
   initPages: function() {

@@ -120,10 +120,13 @@ body {
 }
 
 input {
-  padding: 5px;
+  padding: 10px;
   border-radius: $radius;
-  outline: none;
   border: 1px solid #dddddd;
+  outline: none;
+  &:focus {
+    border-color: $brand-main-color;
+  }
 }
 
 label {

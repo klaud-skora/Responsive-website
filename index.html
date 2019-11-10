@@ -186,7 +186,6 @@
                         </div>  
                         
                     </section>
-
                     <section id="details">
                         <div class="container">
                             <div class="container__top">
@@ -296,7 +295,54 @@
                         </div>
 
                     </section>
-                    <section id="payout"></section>
+                    <section id="payout">
+                        <div class="container">
+                            <div class="container__top">
+                                <p>Payout history</p>
+                            </div>
+                            <div class="time__interval">
+                                <form class="date__form">
+                                    <div class="date__wrapper">
+                                        <input id="date__start" type="date" required>
+                                        <input id="date__end" type="date" required>
+                                        <span class="icon-calendar"></span>
+                                    </div>
+                                    <button type="submit" class="btn btn__refresh"><span class="icon-refresh"></span></button>
+                                </form>
+                            </div>
+                            <div class="container-payout">
+                                <div class="payout__head">
+                                    <div class="payout__head-box">
+                                        <p>Date</p>
+                                        <div class="arrow icon-arrow-up-small"></div>
+                                    </div>
+                                    <div class="payout__head-box">
+                                        <p>Amount ($)</p>
+                                    </div>
+                                    <div class="payout__head-box">
+                                        <p>Deal</p>
+                                    </div>
+                                    <div class="payout__head-box">
+                                        <p>Account</p>
+                                    </div>
+                                </div>
+                                <div class="payout__content" id="payout-content"></div>
+                                <div class="payout__navi">
+                                    <div class="icon-arrow-left"></div>
+                                    <div class="navNumber" id="1">1</div>
+                                    <div class="navNumber" id="2">2</div>
+                                    <div class="navNumber" id="3">3</div>
+                                    <div class="navNumber" id="4">4</div>
+                                    <div class="navNumber" id="5">5</div>
+                                    <div class="navNumber" id="6">6</div>
+                                    <div class="navNumber" id="7">7</div>
+                                    <div class="navNumber" id="8">8</div>
+                                    <div class="navNumber" id="9">9</div>
+                                    <div class="icon-arrow-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section id="postback"></section>
                 </div>
             </div>
@@ -880,6 +926,15 @@
                 <button type="submit" class="btn btn__save js--close-modal">Quit</button>
             </div>
         </div>
+
+        <script id="template-payout-data" type="text/x-handlebars-template">
+            <div class="payout-data">
+                <div class="payout__box">{{{date}}}</div>
+                <div class="payout__box">{{{amount}}}</div>
+                <div class="payout__box">{{{deal}}}</div>
+                <div class="payout__box">{{{account}}}</div>
+            </div>
+        </script>
 
         <script id="template-links" type="text/x-handlebars-template">
             <article class="website__link"> <!-- link -->
