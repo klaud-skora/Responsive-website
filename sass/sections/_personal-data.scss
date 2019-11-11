@@ -15,6 +15,7 @@
             background: $color-border;
         }
     }
+
     .container__form__row {
         max-width: 45%;
         margin: 30px auto;
@@ -23,10 +24,12 @@
         justify-content: space-between;
         align-items: center;
         height: 20px;
+
         h3 {
             flex: 30%;
             max-width: 30%;
         }
+
         input {
             flex: 66%;
             max-width: 66%;
@@ -40,6 +43,7 @@
         .container__form__row {
             height: 50px;
             margin: 20px auto;
+            
             h3, input {
                 margin: 0 auto;
                 flex: 100%;

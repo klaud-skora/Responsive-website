@@ -90,7 +90,6 @@ const app = {
 
       const activeNumb = document.querySelector('.navNumber.active');
 
-
       for (let navNumb of navNumbs) {
         const newNumb = parseInt(activeNumb.id) + 1;
 
