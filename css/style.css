@@ -1678,5 +1678,18 @@ template {
   background: #f5f5f2;
 }
 
+.payout__navi .navNumber {
+  color: #56819f;
+}
+
+.payout__navi .navNumber.active {
+  color: #999999;
+  background: #f5f5f2;
+}
+
+.payout__navi .icon-arrow-left:hover, .payout__navi .icon-arrow-right:hover {
+  background: #f5f5f2;
+}
+
 /* Pages / Views */
 /*# sourceMappingURL=style.css.map */

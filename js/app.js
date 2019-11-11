@@ -43,12 +43,19 @@ const app = {
     const thisApp = this;
 
     const payoutAmount = thisApp.data.payout.length / 9;
+    const navNumbs = document.querySelectorAll('.navNumber');
     let start = 1;
     let end = start + payoutAmount;
 
     for (let pay in thisApp.data.payout.slice(start, end)) {
       new Payout(pay, thisApp.data.payout[pay]);
     } 
+
+    for (let navNumb of navNumbs) {
+      if (navNumb.id == 1) {
+        navNumb.classList.add('active');
+      }
+    }
     thisApp.updatePayout();
   },
 
@@ -58,13 +65,49 @@ const app = {
     const payoutAmount = thisApp.data.payout.length / 9;
     const navNumbs = document.querySelectorAll('.navNumber');
     const payoutContainer = document.querySelector('#payout-content');
+    
+    const arrowLeft = document.querySelector('.payout_left');
+    const arrowRight = document.querySelector('.payout_right');
 
     let start; 
     let end;
 
+    arrowLeft.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const activeNumb = document.querySelector('.navNumber.active');
+
+      for (let navNumb of navNumbs) {
+        if (navNumb.id == (activeNumb.id - 1)) {
+          console.log('bla');
+          navNumb.click(event);
+        }
+      }
+    });
+
+    arrowRight.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const activeNumb = document.querySelector('.navNumber.active');
+
+
+      for (let navNumb of navNumbs) {
+        const newNumb = parseInt(activeNumb.id) + 1;
+
+        if (navNumb.id == newNumb) {
+          console.log('bla');
+          navNumb.click(event);
+        }
+      }
+    });
+
     for (let navNumb of navNumbs) {
       navNumb.addEventListener('click', function(e) {
         e.preventDefault();
+        for (let navNumb of navNumbs) {
+          navNumb.classList.remove('active');
+        }
+        navNumb.classList.add('active');
 
         if (navNumb.id == 1) {
           start = 1;
@@ -75,12 +118,10 @@ const app = {
               start = (i - 1) * payoutAmount + 1;
             }
           }
-          end =  start + payoutAmount - 1;      
+          end =  start + payoutAmount;      
         } 
 
         payoutContainer.innerHTML = '';
-        console.log('start', start);
-        console.log('end', end);
         for (let pay in thisApp.data.payout.slice(start, end)) {
           new Payout(pay, thisApp.data.payout.slice(start, end)[pay]);
         } 

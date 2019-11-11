@@ -103,4 +103,17 @@
             background: $background-color;
         }
     }
+    .navNumber {
+        color: $color-add;
+
+        &.active {
+            color: $paragraph-color-dark;
+            background: $background-color;
+        }
+    }
+    .icon-arrow-left, .icon-arrow-right {
+        &:hover {
+         background: $background-color;   
+        }
+    }
 }

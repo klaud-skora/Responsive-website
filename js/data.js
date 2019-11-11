@@ -444,8 +444,8 @@ dataSource.payout = [
     account: 'bank',
   },
   {
-    date: '17/08/02 (12:58)',
-    amount: '34,425.00',
+    date: '18/08/02 (12:58)',
+    amount: '14,125.00',
     deal: 'cpl(200)',
     account: 'bank',
   }
