@@ -61,6 +61,7 @@ h5 {
   position: relative;
   padding: 20px 0;
   display: none;
+  max-height: 80%;
 }
 
 .modal.show {
@@ -88,7 +89,7 @@ body {
 
 .container {
   background: #fff;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   max-width: 1170px;
 }
 
@@ -1099,6 +1100,16 @@ template {
 .container__links {
   width: 65%;
   margin: 0 auto;
+  padding: 20px 0;
+}
+
+.container__links .btn {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.listOfLinks__container {
+  padding: 20px 0;
 }
 
 .website__link {
@@ -1185,6 +1196,7 @@ template {
 
 .container__content {
   margin: 0 auto;
+  padding-bottom: 15px;
 }
 
 .container__content .container__section {
@@ -1651,7 +1663,7 @@ template {
 }
 
 .payout__navi {
-  padding: 20px 0;
+  padding: 20px 0 0;
   width: 50%;
   margin: 0 auto;
   display: -ms-flexbox;
