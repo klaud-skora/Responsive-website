@@ -68,11 +68,11 @@
     }
 
     input[type="select"] {
-        background-image: url('../../images/icons/arrow-down-small.svg');
+        background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('../../images/icons/arrow-down-small.svg');
         padding: 5px 30px 5px 10px;
         background-size: 12px auto;
         background-repeat: no-repeat;
-        background-position: right 5px center;
+        background-position: right 10px center;
         cursor: pointer;
     }
 }
@@ -213,11 +213,11 @@
 }
 
 /* quit */
-.pop-up_quit {
+.pop-up_log {
     max-width: 300px;
     max-height: 200px;
     padding: 15px 0;
-    .quit__title {
+    .popup-log__title {
         padding: 0 15px;
         position: relative;
         h3 {
@@ -233,7 +233,7 @@
             background: $color-border;
         }
     }
-    .quit__buttons {
+    .pop-up_log__content {
         width: 100%;
         padding: 30px 10px 0;
         display: flex;
@@ -251,4 +251,60 @@
             background: $btn-quit;
         }
     }
+}
+
+/* login */
+.log-in {
+    max-width: 600px;
+    h3 {
+        text-transform: uppercase;
+    }
+
+    .pop-up_log__content {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+
+        input, button {
+            height: 40px;
+            margin-left: 0;
+        }
+        input {
+            margin-right: 8px;
+            max-width: 40%;
+
+            &::placeholder {
+                color: $paragraph-color;
+                font-size: 13px;
+            }
+
+            &.login_name {
+                background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(../../images/icons/login.svg);
+                background-position: 10px center;
+                background-repeat: no-repeat;
+                background-size: 8%;
+                padding: 10px 5px 10px 20px;
+                text-indent: 20px;
+                width: 200px;
+            }
+
+            &.password {
+                background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(../../images/icons/password.svg);
+                background-position: 10px center;
+                background-repeat: no-repeat;
+                background-size: 12%;
+                padding: 10px 5px 10px 30px;
+                text-indent: 20px;
+                width: 200px;
+            }
+        }
+
+        .btn {
+            border-radius: 5px;
+            margin-right: 0;
+            max-width: 20%;
+        }
+    }
+    
+
 }

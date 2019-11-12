@@ -4,6 +4,13 @@ import Banner from './components/Banner.js';
 import Payout from './components/Payout.js';
 
 const app = {
+
+  initQuitAlert: function() {
+    document.getElementById('quit').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.alert('Successfully logged out.');
+    });
+  },
   
   initNavMenu: function() {
     const thisApp = this;
@@ -194,6 +201,7 @@ const app = {
   },
 
   activateModal: function() {
+    const thisApp = this;
 
     function closeModal() {
       document.getElementById('overlay').classList.remove('show');
@@ -248,6 +256,16 @@ const app = {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
         const quitModal = document.querySelector('#quit-modal');
+        openModal(quitModal);
+        thisApp.initQuitAlert();
+      });
+    });
+
+    /*listener for login */
+    document.querySelectorAll('.icon-login').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const quitModal = document.querySelector('#login-modal');
         openModal(quitModal);
       });
     });
