@@ -1,7 +1,7 @@
 .btn {
     color: $color-light;
     background-color: $brand-main-color;
-    border-radius: 5px;
+    border-radius: $radius;
     width: 130px;
     min-height: 40px;
     display: flex;
@@ -11,6 +11,21 @@
     font-weight: $font-light;
     cursor: pointer;
     margin: 20px auto; 
+    outline: none;
+}
+.btn_thin {
+    color: $color-light;
+    background-color: $brand-main-color;
+    border-radius: $radius;
+    width: 90px;
+    min-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: .5px .5px .5px orange;
+    font-weight: $font-light;
+    cursor: pointer;
+    margin: 0; 
     outline: none;
 }
 

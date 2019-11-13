@@ -269,6 +269,15 @@ const app = {
         openModal(quitModal);
       });
     });
+
+    /* listener for message */
+    document.querySelectorAll('.admin_photo').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const messageModal = document.querySelector('#message-modal');
+        openModal(messageModal);
+      });
+    });
   },
 
   init: function() {

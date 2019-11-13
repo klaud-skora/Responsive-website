@@ -1,0 +1,40 @@
+.talk-cloud {
+    padding: 10px 15px;
+    position: relative;
+    border-radius: 5px;
+    flex: 100%;
+}
+
+.talk-cloud-shipper {
+    background: $color-shade;
+    color: $color-label;
+}
+
+.talk-cloud-shipper::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-left: 13px solid $color-shade;
+    border-bottom: 26px solid transparent;
+}
+
+.talk-cloud-receiver {
+    background: #bababa;
+    color: $color-light;
+}
+
+.talk-cloud-receiver::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 13px solid #bababa;
+    border-bottom: 26px solid transparent;
+}
