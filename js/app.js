@@ -2,6 +2,7 @@ import { dataSource } from './data.js';
 import Link from './components/Link.js';
 import Banner from './components/Banner.js';
 import Payout from './components/Payout.js';
+import Detail from './components/Detail.js';
 
 const app = {
 
@@ -50,7 +51,7 @@ const app = {
     const thisApp = this;
 
     const payoutAmount = thisApp.data.payout.length / 9;
-    const navNumbs = document.querySelectorAll('.navNumber');
+    const navNumbs = document.querySelectorAll('.payoutNavNumber');
     let start = 1;
     let end = start + payoutAmount;
 
@@ -70,7 +71,7 @@ const app = {
     const thisApp = this;
 
     const payoutAmount = thisApp.data.payout.length / 9;
-    const navNumbs = document.querySelectorAll('.navNumber');
+    const navNumbs = document.querySelectorAll('.payoutNavNumber');
     const payoutContainer = document.querySelector('#payout-content');
     
     const arrowLeft = document.querySelector('.payout_left');
@@ -82,11 +83,10 @@ const app = {
     arrowLeft.addEventListener('click', function(e) {
       e.preventDefault();
 
-      const activeNumb = document.querySelector('.navNumber.active');
+      const activeNumb = document.querySelector('.payoutNavNumber.active');
 
       for (let navNumb of navNumbs) {
         if (navNumb.id == (activeNumb.id - 1)) {
-          console.log('bla');
           navNumb.click(event);
         }
       }
@@ -95,13 +95,13 @@ const app = {
     arrowRight.addEventListener('click', function(e) {
       e.preventDefault();
 
-      const activeNumb = document.querySelector('.navNumber.active');
+      const activeNumb = document.querySelector('.payoutNavNumber.active');
 
       for (let navNumb of navNumbs) {
         const newNumb = parseInt(activeNumb.id) + 1;
 
         if (navNumb.id == newNumb) {
-          console.log('bla');
+
           navNumb.click(event);
         }
       }
@@ -134,6 +134,95 @@ const app = {
       });
     }
   },
+
+  
+  initDetails: function() {
+    const thisApp = this;
+  
+    const detailsAmount = thisApp.data.details.length / 9;
+    const navNumbs = document.querySelectorAll('.detailsNavNumber');
+    let start = 1;
+    let end = start + detailsAmount;
+  
+    for (let detail in thisApp.data.details.slice(start, end)) {
+      console.log('detail', detail);
+      new Detail(detail, thisApp.data.details[detail]);
+    } 
+    
+    for (let navNumb of navNumbs) {
+      if (navNumb.id == 1) {
+        navNumb.classList.add('active');
+      }
+    }
+    thisApp.updateDetails();
+  },
+  
+  updateDetails: function() {
+    const thisApp = this;
+
+    const detailsAmount = thisApp.data.details.length / 9;
+    const navNumbs = document.querySelectorAll('.detailsNavNumber');
+    const detailsContainer = document.querySelector('#details-content');
+    
+    const arrowLeft = document.querySelector('.details_left');
+    const arrowRight = document.querySelector('.details_right');
+
+    let start; 
+    let end;
+
+    arrowLeft.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const activeNumb = document.querySelector('.detailsNavNumber.active');
+
+      for (let navNumb of navNumbs) {
+        if (navNumb.id == (activeNumb.id - 1)) {
+          navNumb.click(event);
+        }
+      }
+    });
+
+    arrowRight.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const activeNumb = document.querySelector('.detailsNavNumber.active');
+
+      for (let navNumb of navNumbs) {
+        const newNumb = parseInt(activeNumb.id) + 1;
+
+        if (navNumb.id == newNumb) {
+          navNumb.click(event);
+        }
+      }
+    });
+
+    for (let navNumb of navNumbs) {
+      navNumb.addEventListener('click', function(e) {
+        e.preventDefault();
+        for (let navNumb of navNumbs) {
+          navNumb.classList.remove('active');
+        }
+        navNumb.classList.add('active');
+
+        if (navNumb.id == 1) {
+          start = 1;
+          end = detailsAmount + 1;
+        } else {
+          for ( let i = 2; i < 10; i++) {
+            if (navNumb.id == i ) {
+              start = (i - 1) * detailsAmount + 1;
+            }
+          }
+          end =  start + detailsAmount;      
+        } 
+
+        detailsContainer.innerHTML = '';
+        for (let detail in thisApp.data.details.slice(start, end)) {
+          new Detail(detail, thisApp.data.details.slice(start, end)[detail]);
+        } 
+      });
+    }
+  },
   
   initData: function() {
     const thisApp = this;
@@ -143,6 +232,7 @@ const app = {
     thisApp.initLinks();
     thisApp.initBanners();
     thisApp.initPayout();
+    thisApp.initDetails();
   },
 
   initPages: function() {

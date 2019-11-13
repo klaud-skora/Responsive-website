@@ -1174,6 +1174,214 @@ template {
   }
 }
 
+.container-details {
+  padding: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.details__head {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 4px;
+  margin: 0 auto;
+}
+
+.details__head .details__head-box {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 2px;
+}
+
+.details__head .details__head-box p, .details__head .details__head-box div {
+  display: inline-block;
+  margin: 0;
+}
+
+.details__head .details__head-box p {
+  margin-right: 2px;
+  color: #b2b2b2;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0;
+}
+
+.details__head .details__head-box .arrow {
+  font-size: 10px;
+  margin: auto 0;
+  display: none;
+}
+
+.details__head .details_title {
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+.details__head .details_title:hover {
+  background: #f5f5f2;
+}
+
+.details__head .details_title:hover p {
+  color: #333333;
+  cursor: pointer;
+}
+
+.details__head .details_title:hover .arrow {
+  display: inline-block;
+}
+
+.details-data {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 15px 4px;
+  cursor: pointer;
+}
+
+.details-data:hover {
+  background: #f1f3f3;
+}
+
+.details-data::before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100%;
+  top: 0;
+  background: #e3e3e3;
+}
+
+.details-data:last-of-type::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  background: #e3e3e3;
+}
+
+.details-data .details__box {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  color: #333333;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.details__navi {
+  padding: 20px 0 0;
+  width: 50%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.details__navi div {
+  -ms-flex: 8%;
+      flex: 8%;
+  max-width: 8%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.details__navi div:hover {
+  background: #f5f5f2;
+}
+
+.details__navi .detailsNavNumber {
+  color: #56819f;
+}
+
+.details__navi .detailsNavNumber.active {
+  color: #999999;
+  background: #f5f5f2;
+}
+
+.details__navi .icon-arrow-left:hover, .details__navi .icon-arrow-right:hover {
+  background: #f5f5f2;
+}
+
+.d_col-1 {
+  -ms-flex: 12%;
+      flex: 12%;
+  max-width: 12%;
+}
+
+.d_col-2 {
+  -ms-flex: 12%;
+      flex: 12%;
+  max-width: 12%;
+}
+
+.d_col-3 {
+  -ms-flex: 8%;
+      flex: 8%;
+  max-width: 8%;
+}
+
+.d_col-4 {
+  -ms-flex: 8%;
+      flex: 8%;
+  max-width: 8%;
+}
+
+.d_col-5 {
+  -ms-flex: 10%;
+      flex: 10%;
+  max-width: 10%;
+}
+
+.d_col-6 {
+  -ms-flex: 8%;
+      flex: 8%;
+  max-width: 8%;
+}
+
+.d_col-7 {
+  -ms-flex: 10%;
+      flex: 10%;
+  max-width: 10%;
+}
+
+.d_col-8 {
+  -ms-flex: 12%;
+      flex: 12%;
+  max-width: 12%;
+}
+
+.d_col-9 {
+  -ms-flex: 12%;
+      flex: 12%;
+  max-width: 12%;
+}
+
+.d_col-10 {
+  -ms-flex: 10%;
+      flex: 10%;
+  max-width: 10%;
+}
+
+.d_col-11 {
+  -ms-flex: 8%;
+      flex: 8%;
+  max-width: 8%;
+}
+
 .container__links {
   width: 65%;
   margin: 0 auto;
@@ -1854,8 +2062,6 @@ template {
       flex: 25%;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
-  cursor: pointer;
   border-radius: 2px;
 }
 
@@ -1869,19 +2075,30 @@ template {
   color: #b2b2b2;
   font-weight: 600;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .payout__head .payout__head-box .arrow {
   font-size: 10px;
   margin: auto 0;
+  display: none;
 }
 
-.payout__head .payout__head-box:hover {
+.payout__head .payout_title {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.payout__head .payout_title:hover {
   background: #f5f5f2;
 }
 
-.payout__head .payout__head-box:hover p {
+.payout__head .payout_title:hover p {
   color: #333333;
+}
+
+.payout__head .payout_title:hover .arrow {
+  display: inline-block;
 }
 
 .payout-data {
@@ -1894,6 +2111,7 @@ template {
       flex: 25%;
   position: relative;
   padding: 15px 15px;
+  cursor: pointer;
 }
 
 .payout-data:hover {
@@ -1927,6 +2145,7 @@ template {
   padding: 8px;
   color: #333333;
   font-size: 11px;
+  cursor: pointer;
 }
 
 .payout__navi {
@@ -1957,11 +2176,11 @@ template {
   background: #f5f5f2;
 }
 
-.payout__navi .navNumber {
+.payout__navi .payoutNavNumber {
   color: #56819f;
 }
 
-.payout__navi .navNumber.active {
+.payout__navi .payoutNavNumber.active {
   color: #999999;
   background: #f5f5f2;
 }

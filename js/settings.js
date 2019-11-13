@@ -11,4 +11,5 @@ export const settings = {
 export const templates = {
   listOfLinks: Handlebars.compile(document.querySelector('#template-links').innerHTML),
   payoutList: Handlebars.compile(document.querySelector('#template-payout-data').innerHTML),
+  detailsList: Handlebars.compile(document.querySelector('#template-details').innerHTML),
 };
