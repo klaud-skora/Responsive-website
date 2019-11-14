@@ -7,7 +7,6 @@ class Payout {
 
     thisPayout.name = name;
     thisPayout.data = data;
-    console.log('data', thisPayout.data);
 
     thisPayout.renderInList();
   }

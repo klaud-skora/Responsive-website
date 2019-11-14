@@ -145,7 +145,6 @@ const app = {
     let end = start + detailsAmount;
   
     for (let detail in thisApp.data.details.slice(start, end)) {
-      console.log('detail', detail);
       new Detail(detail, thisApp.data.details[detail]);
     } 
     
@@ -274,6 +273,24 @@ const app = {
   activatePage: function(pageId) {
     const thisApp = this;
 
+    /*
+    const hamburger = document.querySelector('.menu-trigger');
+    const navMenu = document.querySelector('.horizontal_wrapper');
+    const navMenuWrapper = document.querySelector('.sidebar');
+
+    function toggleMenu(visible) {
+      navMenu.classList.toggle('show', visible);
+    }
+    
+    hamburger.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleMenu();
+      navMenuWrapper.classList.toggle('active');
+    }); 
+    */
+
+
+    
     /* add class "active" to matching pages, remove from non-matching */
     for (let page of thisApp.pages) {
       page.classList.toggle('active', page.id == pageId);

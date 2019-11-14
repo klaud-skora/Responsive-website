@@ -7,7 +7,6 @@ class Detail {
     
     thisDetail.name = name;
     thisDetail.data = data;
-    console.log('data', thisDetail.data);
 
     thisDetail.renderInList();
   }
@@ -20,7 +19,7 @@ class Detail {
     thisDetail.element = utils.createDOMFromHTML(generatedHTML);
     
     const detailContainer = document.querySelector('#details-content');
-    console.log('detailcontainer', detailContainer);
+    //console.log('detailcontainer', detailContainer);
     
     detailContainer.appendChild(thisDetail.element);
   } 

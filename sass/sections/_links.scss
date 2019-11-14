@@ -1,5 +1,5 @@
 .container__links {
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
     padding: 20px 0;
 
@@ -15,6 +15,11 @@
 
 .website__link {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
 
     &:before {
         position: absolute;
@@ -25,25 +30,23 @@
         background: $color-border;
     }
   
-    .link__cont {
-        display: inline-block;
-        width: 30%;
-        margin-right: 60px;
-        margin-left: 20px;
-    }  
-
-    .link__icons {
-        margin-right: 20px;
-        width: 50px;
-        margin-left: 30px;
+    .link__name {
+        flex: 30%;
+        max-width: 30%;
     }
-  
+    .link__wrapper {
+        flex: 50%;
+        max-width: 50%;
+    }
+
     a {
         color: $color-add;
         cursor: pointer;
     }
   
-    .link__options {
+    .link__icons {
+        flex: 10%;
+        max-width: 10%;
         display: flex;
         justify-content: space-between;
         visibility: hidden;
@@ -62,7 +65,7 @@
 .website__link:hover {
     background: $color-link-background;
 
-    .link__options {
+    .link__icons {
       visibility: visible;
     }
 } 
@@ -77,20 +80,35 @@
     background: $color-border;
 }
 
+@media (max-width: 1024px) {
+    .container__links {
+        width: 90%;
+    }
+}
+
 @media (max-width: 740px) {
     .website__link {
         padding-top: 10px;
-        
-        .link__cont {
-            display: block;
+
+        .link__icons {
+            visibility: visible;
+            flex: 100%;
+            max-width: 100%;
+            justify-content: flex-start;
+
+            p {
+                margin: 20px;
+            }
         }
 
         .link__name, .link__wrapper {
-            width: 100%;
+            flex: 100%;
+            max-width: 100%;
         }
     }
+    
     .container__links {
         text-align: left;
-        padding-bottom: 8px;
+        padding-bottom: 20px;
     }
 }

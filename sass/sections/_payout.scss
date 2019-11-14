@@ -35,9 +35,8 @@
             margin: auto 0;
             display: none;
         }
-
-        
     }
+
     .payout_title {
         padding: 8px;
         cursor: pointer;
@@ -132,5 +131,11 @@
         &:hover {
          background: $background-color;   
         }
+    }
+}
+
+@media (max-width: 498px) {
+    .payout__navi > div {
+        margin-right: 15px;
     }
 }

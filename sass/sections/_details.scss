@@ -172,3 +172,8 @@
     max-width: 8%;
 }
 
+@media (max-width: 498px) {
+    .details__navi > div {
+        margin-right: 15px;
+    }
+}
