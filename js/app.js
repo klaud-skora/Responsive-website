@@ -52,8 +52,8 @@ const app = {
 
     const payoutAmount = thisApp.data.payout.length / 9;
     const navNumbs = document.querySelectorAll('.payoutNavNumber');
-    let start = 1;
-    let end = start + payoutAmount;
+    let start = 0;
+    let end = payoutAmount;
 
     for (let pay in thisApp.data.payout.slice(start, end)) {
       new Payout(pay, thisApp.data.payout[pay]);
@@ -116,12 +116,12 @@ const app = {
         navNumb.classList.add('active');
 
         if (navNumb.id == 1) {
-          start = 1;
-          end = payoutAmount + 1;
+          start = 0;
+          end = payoutAmount;
         } else {
           for ( let i = 2; i < 10; i++) {
-            if (navNumb.id == i ) {
-              start = (i - 1) * payoutAmount + 1;
+            if (navNumb.id == i) {
+              start = (i - 1) * payoutAmount;
             }
           }
           end =  start + payoutAmount;      
@@ -141,8 +141,8 @@ const app = {
   
     const detailsAmount = thisApp.data.details.length / 9;
     const navNumbs = document.querySelectorAll('.detailsNavNumber');
-    let start = 1;
-    let end = start + detailsAmount;
+    let start = 0;
+    let end = detailsAmount;
   
     for (let detail in thisApp.data.details.slice(start, end)) {
       new Detail(detail, thisApp.data.details[detail]);
@@ -204,12 +204,12 @@ const app = {
         navNumb.classList.add('active');
 
         if (navNumb.id == 1) {
-          start = 1;
-          end = detailsAmount + 1;
+          start = 0;
+          end = detailsAmount;
         } else {
           for ( let i = 2; i < 10; i++) {
             if (navNumb.id == i ) {
-              start = (i - 1) * detailsAmount + 1;
+              start = (i - 1) * detailsAmount;
             }
           }
           end =  start + detailsAmount;      
@@ -258,6 +258,16 @@ const app = {
       link.addEventListener('click', function(event) {
         const clickedElement = this;
         event.preventDefault();
+
+        const navMenu = document.querySelector('.horizontal_wrapper');
+        const navMenuWrapper = document.querySelector('.sidebar');
+
+        function toggleMenu(visible) {
+          navMenu.classList.toggle('show', visible);
+        }
+    
+        toggleMenu();
+        navMenuWrapper.classList.toggle('active');
     
         /* get page id from href attribute */
         const id = clickedElement.getAttribute('href').replace('#',  '');
@@ -273,24 +283,6 @@ const app = {
   activatePage: function(pageId) {
     const thisApp = this;
 
-    /*
-    const hamburger = document.querySelector('.menu-trigger');
-    const navMenu = document.querySelector('.horizontal_wrapper');
-    const navMenuWrapper = document.querySelector('.sidebar');
-
-    function toggleMenu(visible) {
-      navMenu.classList.toggle('show', visible);
-    }
-    
-    hamburger.addEventListener('click', function(e) {
-      e.preventDefault();
-      toggleMenu();
-      navMenuWrapper.classList.toggle('active');
-    }); 
-    */
-
-
-    
     /* add class "active" to matching pages, remove from non-matching */
     for (let page of thisApp.pages) {
       page.classList.toggle('active', page.id == pageId);
