@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+img, a, .icon .btn {
+  cursor: pointer;
+}
+
 /* modals styles */
 .overlay {
   position: fixed;

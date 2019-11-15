@@ -29,6 +29,15 @@
     outline: none;
 }
 
+.btn, .btn_thin {
+    &:hover {
+        background: darken($brand-main-color, 15%);
+        border: 1px solid $brand-main-color;
+        text-shadow: .5px .2px .2px $brand-main-color;
+        border-radius: 5px;
+    }
+}
+
 .btn__refresh {
     width: 40px;
     height: 40px;
@@ -48,6 +57,12 @@
     border: none;
     border-radius: 2px;
     color: #fdfdfd;
+
+    &:hover {
+        background: darken($color-border, 20%);
+        border: 1px solid $color-label;
+        text-shadow: .5px .2px .2px $color-label;
+    }
 }
 
 .btn__save {
@@ -57,3 +72,5 @@
     border-radius: 2px;
     border-color: $brand-main-color;
 }
+
+

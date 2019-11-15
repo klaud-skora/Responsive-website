@@ -19,6 +19,17 @@
       display: inline-block;
       margin: 14px 6px;
     }
+
+    @keyframes scale-up-center {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+
+    a:hover {
+      color: $brand-main-color;
+      text-shadow: 0 .2px .2px $color-label;
+      animation: scale-up-center .5s forwards;
+    }
     
     h5, h2 {
       display: inline-block;

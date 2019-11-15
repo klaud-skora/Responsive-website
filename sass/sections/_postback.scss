@@ -53,11 +53,15 @@
             border: 1px solid $color-border;
             padding: 15px;
             resize: none;
+            outline: none;
 
             &::placeholder {
                 color: $paragraph-color;
                 font-size: 13px;
             }
+            &:focus {
+                border-color: $brand-main-color;
+              }
         }
     }
 

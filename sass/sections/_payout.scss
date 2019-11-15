@@ -121,11 +121,16 @@
     .payoutNavNumber {
         color: $color-add;
 
+        &:hover {
+            color: $brand-main-color;
+        }
         &.active {
             color: $paragraph-color-dark;
             background: $background-color;
         }
     }
+
+    
     .icon-arrow-left, .icon-arrow-right {
         &:hover {
          background: $background-color;   

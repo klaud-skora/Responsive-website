@@ -116,6 +116,9 @@
     .detailsNavNumber {
         color: $color-add;
 
+        &:hover {
+            color: $brand-main-color;
+        }
         &.active {
             color: $paragraph-color-dark;
             background: $background-color;

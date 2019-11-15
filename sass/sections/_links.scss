@@ -1,5 +1,5 @@
 .container__links {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     padding: 20px 0;
 
@@ -31,18 +31,22 @@
     }
   
     .link__name {
-        flex: 30%;
-        max-width: 30%;
+        flex: 43%;
+        max-width: 43%;
     }
     .link__wrapper {
-        flex: 50%;
-        max-width: 50%;
+        flex: 43%;
+        max-width: 43%;
     }
 
     a {
         color: $color-add;
         cursor: pointer;
     }
+    a:hover {
+        color: $brand-main-color;
+        text-shadow: 1px 1px .5px $color-light;
+      }
   
     .link__icons {
         flex: 10%;
@@ -58,6 +62,10 @@
 
         &:first-of-type {
             color: $brand-main-color;
+        }
+        &:hover {
+            color: $color-label;
+            animation: scale-up-center .5s forwards;
         }
     }
 }
@@ -78,6 +86,17 @@
     bottom: 0;
     left: 0;
     background: $color-border;
+}
+
+#banners {
+    .link__name {
+        flex: 28%;
+        max-width: 28%;
+    }
+    .link__wrapper {
+        flex: 57%;
+        max-width: 57%;
+    }
 }
 
 @media (max-width: 1024px) {
