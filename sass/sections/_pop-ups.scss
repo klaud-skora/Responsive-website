@@ -68,15 +68,6 @@
       font-size: 12px;
     }
   }
-
-  input[name="select"] {
-    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('../../images/icons/arrow-down-small.svg');
-    padding: 5px 30px 5px 10px;
-    background-size: 12px auto;
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    cursor: pointer;
-  }
 }
 
 /* links */
@@ -294,7 +285,7 @@
       }
 
       &.login_name {
-        background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(../../images/icons/login.svg);
+        background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(../images/icons/login.svg);
         background-position: 10px center;
         background-repeat: no-repeat;
         background-size: 8%;
@@ -304,7 +295,7 @@
       }
 
       &.password {
-        background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(../../images/icons/password.svg);
+        background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(../images/icons/password.svg);
         background-position: 10px center;
         background-repeat: no-repeat;
         background-size: 12%;
@@ -411,7 +402,7 @@
     input {
       width: 100%;
       height: 35px;
-      background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('../../images/icons/message.svg');
+      background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('../images/icons/message.svg');
       padding: 5px 10px 5px 30px;
       background-size: 12px auto;
       background-repeat: no-repeat;
