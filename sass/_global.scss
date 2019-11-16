@@ -6,6 +6,15 @@ img, a, .icon .btn {
   cursor: pointer;
 }
 
+input[name="select"] {
+  background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('../../images/icons/arrow-down-small.svg');
+  padding: 5px 30px 5px 10px;
+  background-size: 12px auto;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
 /* modals styles */
 .overlay {
   position: fixed;
