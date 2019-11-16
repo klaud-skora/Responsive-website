@@ -99,7 +99,7 @@ const app = {
     } 
 
     for (let navNumb of navNumbs) {
-      if (navNumb.id == 1) {
+      if (navNumb.textContent == 1) {
         navNumb.classList.add('active');
       }
     }
@@ -112,7 +112,7 @@ const app = {
     const payoutAmount = thisApp.data.payout.length / 9;
     const navNumbs = document.querySelectorAll('.payoutNavNumber');
     const payoutContainer = document.querySelector('#payout-content');
-    
+
     const arrowLeft = document.querySelector('.payout_left');
     const arrowRight = document.querySelector('.payout_right');
 
@@ -123,9 +123,10 @@ const app = {
       e.preventDefault();
 
       const activeNumb = document.querySelector('.payoutNavNumber.active');
+      console.log(activeNumb);
 
       for (let navNumb of navNumbs) {
-        if (navNumb.id == (activeNumb.id - 1)) {
+        if (navNumb.textContent == (activeNumb.textContent - 1)) {
           navNumb.click(event);
         }
       }
@@ -137,9 +138,9 @@ const app = {
       const activeNumb = document.querySelector('.payoutNavNumber.active');
 
       for (let navNumb of navNumbs) {
-        const newNumb = parseInt(activeNumb.id) + 1;
+        const newNumb = parseInt(activeNumb.textContent) + 1;
 
-        if (navNumb.id == newNumb) {
+        if (navNumb.textContent == newNumb) {
 
           navNumb.click(event);
         }
@@ -154,12 +155,12 @@ const app = {
         }
         navNumb.classList.add('active');
 
-        if (navNumb.id == 1) {
+        if (navNumb.textContent == 1) {
           start = 0;
           end = payoutAmount;
         } else {
           for ( let i = 2; i < 10; i++) {
-            if (navNumb.id == i) {
+            if (navNumb.textContent == i) {
               start = (i - 1) * payoutAmount;
             }
           }
@@ -174,7 +175,6 @@ const app = {
     }
   },
 
-  
   initDetails: function() {
     const thisApp = this;
   
@@ -188,7 +188,7 @@ const app = {
     } 
     
     for (let navNumb of navNumbs) {
-      if (navNumb.id == 1) {
+      if (navNumb.textContent == 1) {
         navNumb.classList.add('active');
       }
     }
@@ -214,7 +214,7 @@ const app = {
       const activeNumb = document.querySelector('.detailsNavNumber.active');
 
       for (let navNumb of navNumbs) {
-        if (navNumb.id == (activeNumb.id - 1)) {
+        if (navNumb.textContent == (activeNumb.textContent - 1)) {
           navNumb.click(event);
         }
       }
@@ -226,9 +226,9 @@ const app = {
       const activeNumb = document.querySelector('.detailsNavNumber.active');
 
       for (let navNumb of navNumbs) {
-        const newNumb = parseInt(activeNumb.id) + 1;
+        const newNumb = parseInt(activeNumb.textContent) + 1;
 
-        if (navNumb.id == newNumb) {
+        if (navNumb.textContent == newNumb) {
           navNumb.click(event);
         }
       }
@@ -242,12 +242,12 @@ const app = {
         }
         navNumb.classList.add('active');
 
-        if (navNumb.id == 1) {
+        if (navNumb.textContent == 1) {
           start = 0;
           end = detailsAmount;
         } else {
           for ( let i = 2; i < 10; i++) {
-            if (navNumb.id == i ) {
+            if (navNumb.textContent == i ) {
               start = (i - 1) * detailsAmount;
             }
           }

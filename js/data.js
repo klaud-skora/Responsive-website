@@ -455,7 +455,7 @@ dataSource.details = [
   {
     tracker_name: 'aff/sam_test',
     initiated_date: '17/08/02 (12:58)',
-    visits: '232',
+    visits: '236',
     unique: '114',
     signups: '12',
     ftd: '6',
@@ -468,7 +468,7 @@ dataSource.details = [
   {
     tracker_name: 'aff/leo_test',
     initiated_date: '14/08/02 (12:58)',
-    visits: '232',
+    visits: '239',
     unique: '124',
     signups: '12',
     ftd: '6',
@@ -546,7 +546,7 @@ dataSource.details = [
   {
     tracker_name: 'aff/sam_test',
     initiated_date: '17/08/02 (12:58)',
-    visits: '232',
+    visits: '239',
     unique: '114',
     signups: '12',
     ftd: '6',
@@ -559,7 +559,7 @@ dataSource.details = [
   {
     tracker_name: 'aff/leo_test',
     initiated_date: '14/08/02 (12:58)',
-    visits: '232',
+    visits: '239',
     unique: '124',
     signups: '12',
     ftd: '6',
@@ -597,8 +597,8 @@ dataSource.details = [
   },
   {
     tracker_name: 'aff/sam_test',
-    initiated_date: '17/08/02 (12:58)',
-    visits: '232',
+    initiated_date: '11/08/02 (12:58)',
+    visits: '233',
     unique: '114',
     signups: '12',
     ftd: '6',

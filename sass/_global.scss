@@ -48,7 +48,7 @@ img, a, .icon .btn {
 body {
   margin: 0;
   background: $background-color;
-  font-family: $brand-font; 
+  font-family: $brand-font;
   font-size: $paragraph-font-size;
   line-height: 1.7;
   font-weight: $font-normal;
@@ -128,6 +128,7 @@ input {
   border-radius: $radius;
   border: 1px solid #dddddd;
   outline: none;
+
   &:focus {
     border-color: $brand-main-color;
   }
@@ -194,6 +195,7 @@ label {
   .content-pages {
     padding-bottom: 0;
   }
+  
   .sidebar {
     height: 52px;
     width: 100%;

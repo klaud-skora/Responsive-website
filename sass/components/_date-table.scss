@@ -1,81 +1,86 @@
 .time__interval {
+  position: relative;
+  padding: 26px 0;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .date__form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .date__wrapper {
+    display: inline-block;
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    padding: 6px 14px;
+  }
+
+  input {
+    border: none;
     position: relative;
-    padding: 26px 0;
-    max-width: 100%;
-    margin: 0 auto;
-
-    .date__form {
-      width: 100%;
-      text-align: center;
-    }
-  
-    .date__wrapper {
-      display: inline-block;
-      border: 1px solid $color-border;
-      border-radius: 5px;
-      padding: 6px 14px;
-    }
-  
-    input {
-      border: none;
-      position: relative;
-      width: 130px;
-      
-      &:first-of-type::after {
-        position: absolute;
-        content: '';
-        height: 100%;
-        width: 1px;
-        right: 18px;
-        background: $color-border;
-      }
-    }
-  
-    button {
-      display: inline-block;
-    }
-    &:after {
+    width: 130px;
+    
+    &:first-of-type::after {
       position: absolute;
-          content: '';
-          height: 1px;
-          width: 100%;
-          bottom: 0;
-          left: 0;
-          background: $color-border;
-    }
-  }
-  
-  @media (max-width: 740px) {
-    .time__interval {
-      width: 100%;
-      display: block;
-      margin: 20px auto;
-      padding: 0 10px;
-    }
-    .date__wrapper {
-      width: 100%;
-    }
-    .date__form {
-      display: flex;
-      flex-wrap: wrap;
-      flex: 100%;
+      content: '';
+      height: 100%;
+      width: 1px;
+      right: 18px;
+      background: $color-border;
     }
   }
 
-  @media (max-width: 570px) {
-      .time__interval {
-      .date__wrapper {
+  button {
+    display: inline-block;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: $color-border;
+  }
+}
+
+@media (max-width: 740px) {
+  .time__interval {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .date__wrapper {
+    width: 100%;
+  }
+
+  .date__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%;
+  }
+}
+
+@media (max-width: 570px) {
+  .time__interval {
+    .date__wrapper {
       display: flex;
       align-items: center;
       justify-content: space-around;
-        input {
-          width: 40%;
-          max-width: 40%;
-          padding: 0;
-        }
-        input::-webkit-datetime-edit {
-          font-size: 10px;
-        }
+
+      input {
+        width: 40%;
+        max-width: 40%;
+        padding: 0;
+      }
+      
+      input::-webkit-datetime-edit {
+        font-size: 10px;
       }
     }
   }
+}

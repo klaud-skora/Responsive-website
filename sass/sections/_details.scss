@@ -1,182 +1,197 @@
 .container-details {
-    padding: 15px;
-    width: 100%;
-    margin: 0 auto;
+  padding: 15px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .details__head {
-    width: 100%;
-    display: flex;
-    padding: 30px 4px;
-    margin: 0 auto;
+  width: 100%;
+  display: flex;
+  padding: 30px 4px;
+  margin: 0 auto;
     
-    .details__head-box {
-        display: flex;
-        padding: 0;
-        cursor: pointer;
-        align-items: center;
-        border-radius: 2px;
+  .details__head-box {
+    display: flex;
+    padding: 0;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 2px;
 
-        p, div {
-            display: inline-block;
-            margin: 0;
-        }
-        p {
-            margin-right: 2px;
-            color: #b2b2b2;
-            font-weight: 600;
-            font-size: 12px;
-            padding: 0;
-        }
-
-        .arrow {
-            font-size: 10px;
-            margin: auto 0;
-            display: none;
-        }
+    p, div {
+      display: inline-block;
+      margin: 0;
     }
 
-    .details_title {
-        padding: 2px 4px;
-        cursor: pointer;        
+    p {
+      margin-right: 2px;
+      color: #b2b2b2;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 0;
+    }
 
-        &:hover {
-            background: $background-color;
+    .arrow {
+      font-size: 10px;
+      margin: auto 0;
+      display: none;
+    }
+  }
 
-            p {
-                color: $color-label;
-                cursor: pointer;
-            }
-            .arrow {
-                display: inline-block;
-            }
-        }
-    } 
-}
-
-.details-data {
-    width: 100%;
-    display: flex;
-    position: relative;
-    padding: 15px 4px;
+  .details_title {
+    padding: 2px 4px;
     cursor: pointer;
 
     &:hover {
-        background: #f1f3f3;
-    }
+      background: $background-color;
 
-    &::before {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100%;
-        top: 0;
-        background: $color-border;
-    }
-
-    &:last-of-type::after {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100%;
-        bottom: 0;
-        background: $color-border;
-    }
-    
-    .details__box {
-        display: flex;
-        padding: 0;
+      p {
         color: $color-label;
-        font-size: 11px;
         cursor: pointer;
+      }
+
+      .arrow {
+        display: inline-block;
+      }
     }
+  } 
+}
+
+.details-data {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 15px 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: #f1f3f3;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: 0;
+    background: $color-border;
+  }
+
+  &:last-of-type::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    background: $color-border;
+  }
+    
+  .details__box {
+    display: flex;
+    padding: 0;
+    color: $color-label;
+    font-size: 11px;
+    cursor: pointer;
+  }
 }
 
 .details__navi {
-    padding: 20px 0 0;
-    width: 50%;
-    margin: 0 auto;
+  padding: 20px 0 0;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  div {
+    flex: 8%;
+    max-width: 8%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    cursor: pointer;
 
-    div {
-        flex: 8%;
-        max-width: 8%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px 0;
-        cursor: pointer;
+    &:hover {
+      background: $background-color;
+    }
+  }
 
-        &:hover {
-            background: $background-color;
-        }
+  .detailsNavNumber {
+    color: $color-add;
+
+    &:hover {
+      color: $brand-main-color;
     }
 
-    .detailsNavNumber {
-        color: $color-add;
+    &.active {
+      color: $paragraph-color-dark;
+      background: $background-color;
+    }
+  }
 
-        &:hover {
-            color: $brand-main-color;
-        }
-        &.active {
-            color: $paragraph-color-dark;
-            background: $background-color;
-        }
+  .icon-arrow-left, .icon-arrow-right {
+    &:hover {
+      background: $background-color;   
     }
-    .icon-arrow-left, .icon-arrow-right {
-        &:hover {
-         background: $background-color;   
-        }
-    }
+  }
 }
+
 .d_col-1 {
-    flex: 12%;
-    max-width: 12%;
+  flex: 12%;
+  max-width: 12%;
 }
+
 .d_col-2 {
-    flex: 12%;
-    max-width: 12%;
+  flex: 12%;
+  max-width: 12%;
 }
+
 .d_col-3 {
-    flex: 8%;
-    max-width: 8%;
+  flex: 8%;
+  max-width: 8%;
 }
+
 .d_col-4 {
-    flex: 8%;
-    max-width: 8%;
+  flex: 8%;
+  max-width: 8%;
 }
+
 .d_col-5 {
-    flex: 10%;
-    max-width: 10%;
+  flex: 10%;
+  max-width: 10%;
 }
+
 .d_col-6 {
-    flex: 8%;
-    max-width: 8%;
+  flex: 8%;
+  max-width: 8%;
 }
+
 .d_col-7 {
-    flex: 10%;
-    max-width: 10%;
+  flex: 10%;
+  max-width: 10%;
 }
+
 .d_col-8 {
-    flex: 12%;
-    max-width: 12%;
+  flex: 12%;
+  max-width: 12%;
 }
+
 .d_col-9 {
-    flex: 12%;
-    max-width: 12%;
+  flex: 12%;
+  max-width: 12%;
 }
+
 .d_col-10 {
-    flex: 10%;
-    max-width: 10%;
+  flex: 10%;
+  max-width: 10%;
 }
+
 .d_col-11 {
-    flex: 8%;
-    max-width: 8%;
+  flex: 8%;
+  max-width: 8%;
 }
 
 @media (max-width: 498px) {
-    .details__navi > div {
-        margin-right: 15px;
-    }
+  .details__navi > div {
+    margin-right: 15px;
+  }
 }

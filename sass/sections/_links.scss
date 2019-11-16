@@ -1,133 +1,137 @@
 .container__links {
-    width: 65%;
+  width: 65%;
+  margin: 0 auto;
+  padding: 20px 0;
+  
+  .btn {
+    padding: 0;
     margin: 0 auto;
-    padding: 20px 0;
-
-    .btn {
-        padding: 0;
-        margin: 0 auto;
-    }
+  }
 }
 
 .listOfLinks__container {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .website__link {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
 
-    &:before {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100%;
-        top: 0px;
-        background: $color-border;
-    }
-  
-    .link__name {
-        flex: 43%;
-        max-width: 43%;
-    }
-    .link__wrapper {
-        flex: 43%;
-        max-width: 43%;
-    }
-
-    a {
-        color: $color-add;
-        cursor: pointer;
-    }
-    a:hover {
-        color: $brand-main-color;
-        text-shadow: 1px 1px .5px $color-light;
-      }
-  
-    .link__icons {
-        flex: 10%;
-        max-width: 10%;
-        display: flex;
-        justify-content: space-between;
-        visibility: hidden;
-    }
-
-    p {
-        display: inline-block;
-        cursor: pointer;
-
-        &:first-of-type {
-            color: $brand-main-color;
-        }
-        &:hover {
-            color: $color-label;
-            animation: scale-up-center .5s forwards;
-        }
-    }
-}
-
-.website__link:hover {
-    background: $color-link-background;
-
-    .link__icons {
-      visibility: visible;
-    }
-} 
-
-.website__link:last-of-type:after {
+  &:before {
     position: absolute;
     content: '';
     height: 1px;
     width: 100%;
-    bottom: 0;
-    left: 0;
+    top: 0px;
     background: $color-border;
+  }
+  
+  .link__name {
+    flex: 43%;
+    max-width: 43%;
+  }
+
+  .link__wrapper {
+    flex: 43%;
+    max-width: 43%;
+  }
+
+  a {
+    color: $color-add;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $brand-main-color;
+    text-shadow: 1px 1px .5px $color-light;
+  }
+  
+  .link__icons {
+    flex: 10%;
+    max-width: 10%;
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+  }
+
+  p {
+    display: inline-block;
+    cursor: pointer;
+
+    &:first-of-type {
+      color: $brand-main-color;
+    }
+
+    &:hover {
+      color: $color-label;
+      animation: scale-up-center .5s forwards;
+    }
+  }
+}
+
+.website__link:hover {
+  background: $color-link-background;
+
+  .link__icons {
+    visibility: visible;
+  }
+} 
+
+.website__link:last-of-type:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: $color-border;
 }
 
 #banners {
-    .link__name {
-        flex: 28%;
-        max-width: 28%;
-    }
-    .link__wrapper {
-        flex: 57%;
-        max-width: 57%;
-    }
+  .link__name {
+    flex: 28%;
+    max-width: 28%;
+  }
+
+  .link__wrapper {
+    flex: 57%;
+    max-width: 57%;
+  }
 }
 
 @media (max-width: 1024px) {
-    .container__links {
-        width: 90%;
-    }
+  .container__links {
+    width: 90%;
+  }
 }
 
 @media (max-width: 740px) {
-    .website__link {
-        padding-top: 10px;
+  .website__link {
+    padding-top: 10px;
 
-        .link__icons {
-            visibility: visible;
-            flex: 100%;
-            max-width: 100%;
-            justify-content: flex-start;
+    .link__icons {
+      visibility: visible;
+      flex: 100%;
+      max-width: 100%;
+      justify-content: flex-start;
 
-            p {
-                margin: 20px;
-            }
-        }
-
-        .link__name, .link__wrapper {
-            flex: 100%;
-            max-width: 100%;
-        }
+      p {
+        margin: 20px;
+      }
     }
-    
-    .container__links {
-        text-align: left;
-        padding-bottom: 20px;
+
+    .link__name, .link__wrapper {
+      flex: 100%;
+      max-width: 100%;
     }
+  }
+
+  .container__links {
+    text-align: left;
+    padding-bottom: 20px;
+  }
 }
