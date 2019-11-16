@@ -1112,7 +1112,7 @@ template {
 .chart_container {
   width: 100%;
   margin: 40px auto 20px;
-  padding: 0 30px;
+  padding: 0 30px 20px;
 }
 
 .chart_container .row {
@@ -1158,52 +1158,13 @@ template {
   margin: 0;
 }
 
-.chart__keys {
-  margin: 45px 0;
-}
-
-.chart__keys .keys {
+canvas {
+  max-width: 90%;
+  margin: 45px auto 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.chart__keys .chart__key {
-  border-radius: 2px;
-  padding: 8px 12px;
-  margin-right: 25px;
-  display: inline-block;
-}
-
-.chart__keys .shaded {
-  background: #f3f3f1;
-}
-
-.chart__keys p {
-  display: inline-block;
-  margin: 0 5px 0 10px;
-}
-
-.chart__keys .earned {
-  color: #56819f;
-}
-
-.chart__image {
-  height: 300px;
-  max-width: 600px;
-  margin: 0 auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-.chart__image img {
-  width: 100%;
-  height: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -1222,21 +1183,7 @@ template {
 
 @media (max-width: 740px) {
   .chart_container {
-    padding: 20px;
-  }
-  .chart_container .chart__keys {
-    margin: 40px auto;
-  }
-  .chart_container .chart__keys .chart__key {
-    margin: 4px 5px;
-  }
-  .chart_container .chart__image {
-    width: 100%;
-    margin: 0;
-    overflow-x: scroll;
-  }
-  .chart_container .chart__image img {
-    width: 600px;
+    padding: 20px 20px 40px;
   }
 }
 

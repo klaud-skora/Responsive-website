@@ -162,26 +162,7 @@
                                         <span>432</span>
                                     </div>
                                 </div>
-                                <div class="chart__keys">
-                                    <h3>Earnings chart</h3>
-                                    <div class="keys">
-                                        <div class="chart__key shaded">
-                                            <div class="key__dot dot_low"></div>
-                                            <p>Signups</p>
-                                        </div>
-                                        <div class="chart__key shaded">
-                                            <div class="key__dot"></div>
-                                            <p>FTD</p>
-                                        </div>
-                                        <div class="chart__key">
-                                            <div class="key__dot dot_none"></div>
-                                            <p class="earned">Earned</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="chart__image">
-                                    <img src="images/chart01.png" alt="chart">
-                                </div>
+                                <canvas id="myChart"></canvas>
                             </div>
                         </div>      
                     </section>
@@ -1215,10 +1196,10 @@
                     <p class="icon-links"></p>
                     <p class="icon-trash"></p>
                 </div>
-      
             </article> <!-- .link -->
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-        <script src="js/app.js" type="module"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="js/script.js" type="module"></script>
     </body>
 </html>
