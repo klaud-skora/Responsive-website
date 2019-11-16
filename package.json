@@ -36,5 +36,8 @@
     "onchange": "^6.0.0",
     "stylelint": "^11.0.0",
     "stylelint-scss": "^3.11.0"
+  },
+  "dependencies": {
+    "imagemin": "^7.0.1"
   }
 }
