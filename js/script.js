@@ -395,7 +395,6 @@ const app = {
         e.preventDefault();
         const quitModal = document.querySelector('#quit-modal');
         openModal(quitModal);
-        thisApp.initQuitAlert();
       });
     });
 
@@ -426,6 +425,7 @@ const app = {
     thisApp.initPages();
     thisApp.activateModal();
     thisApp.initCanvas();
+    thisApp.initQuitAlert();
   },
 };
 
