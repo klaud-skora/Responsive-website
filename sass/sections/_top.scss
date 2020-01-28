@@ -65,8 +65,26 @@
       width: 1px;
       left: -18px;
       background: $color-border;
-    } 
+    }
   } 
+}
+
+@media  (min-width: 741px) {
+  .hamburger-info {
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    height: 100%;
+    margin-left: 14px;
+    margin-right: auto;
+    transition: opacity 1s;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
 }
 
 @media (max-width: 740px) {

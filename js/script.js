@@ -7,6 +7,7 @@ import Detail from './components/Detail.js';
 
 const app = {
 
+  /* dynamic render for diagram */
   initCanvas: function() {
     var ctx = document.getElementById('myChart').getContext('2d');
     
@@ -58,6 +59,7 @@ const app = {
     const hamburger = document.querySelector('.menu-trigger');
     const navMenu = document.querySelector('.horizontal_wrapper');
     const navMenuWrapper = document.querySelector('.sidebar');
+    const navMenuTrigger = document.querySelector('.hamburger-info');
 
     function toggleMenu(visible) {
       navMenu.classList.toggle('show', visible);
@@ -66,7 +68,19 @@ const app = {
     hamburger.addEventListener('click', function(e) {
       e.preventDefault();
       toggleMenu();
+      navMenuTrigger.classList.toggle('active');
+      navMenuWrapper.classList.toggle('active'); 
+    });
+
+    function showMenu() {
+      toggleMenu();
+      navMenuTrigger.classList.toggle('active');
       navMenuWrapper.classList.toggle('active');
+    }
+
+    navMenuTrigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      showMenu();
     });
   },
 
@@ -340,6 +354,7 @@ const app = {
 
   activateModal: function() {
     const thisApp = this;
+    console.log(thisApp);
 
     function closeModal() {
       document.getElementById('overlay').classList.remove('show');

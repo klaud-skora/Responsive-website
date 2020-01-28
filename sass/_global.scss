@@ -186,6 +186,12 @@ label {
   }
 }
 
+@media  (min-width: 741px) {
+  .sidebar.active {
+    display: none;
+  }
+}
+
 @media (max-width: 823px) and (max-height: 450px) {
   .main_wrapper {
     height: 650px;
