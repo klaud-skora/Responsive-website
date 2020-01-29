@@ -95,6 +95,11 @@ body {
   }
 }
 
+.sidebar {
+  width: 200px;
+  transition: width .3s linear;
+}
+
 .cont {
   display: flex;
   justify-content: center;
@@ -188,7 +193,11 @@ label {
 
 @media  (min-width: 741px) {
   .sidebar.active {
-    display: none;
+    width: 0;
+    background-position: 0 -100px;
+    * {
+      visibility: hidden;
+    }
   }
 }
 

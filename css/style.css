@@ -123,6 +123,11 @@ body {
   display: block;
 }
 
+.sidebar {
+  width: 200px;
+  transition: width .3s linear;
+}
+
 .cont {
   display: -ms-flexbox;
   display: flex;
@@ -221,7 +226,11 @@ label input[type="checkbox"]:checked + .checkbox_background i {
 
 @media (min-width: 741px) {
   .sidebar.active {
-    display: none;
+    width: 0;
+    background-position: 0 -100px;
+  }
+  .sidebar.active * {
+    visibility: hidden;
   }
 }
 
