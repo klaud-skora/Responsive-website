@@ -60,6 +60,13 @@ const app = {
     const navMenu = document.querySelector('.horizontal_wrapper');
     const navMenuWrapper = document.querySelector('.sidebar');
     const navMenuTrigger = document.querySelector('.hamburger-info');
+    const navLink = document.querySelectorAll('.nav_section');
+
+    for(let link of navLink) {
+      link.addEventListener('click', function() {
+        navMenuTrigger.classList.add('active');
+      });
+    }
 
     function toggleMenu(visible) {
       navMenu.classList.toggle('show', visible);
