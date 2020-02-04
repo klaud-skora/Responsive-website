@@ -418,6 +418,13 @@ const app = {
         const quitModal = document.querySelector('#quit-modal');
         openModal(quitModal);
       });
+
+      const cancelQuit = document.querySelector('#cancel-quit');
+      cancelQuit.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#quit-modal').classList.remove('show');
+        document.getElementById('overlay').classList.remove('show');
+      })
     });
 
     /*listener for login */
