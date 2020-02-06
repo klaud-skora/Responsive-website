@@ -424,7 +424,7 @@ const app = {
         e.preventDefault();
         document.querySelector('#quit-modal').classList.remove('show');
         document.getElementById('overlay').classList.remove('show');
-      })
+      });
     });
 
     /*listener for login */
